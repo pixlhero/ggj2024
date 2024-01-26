@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
     {
         State = GameState.Playing;
         OnGameStateChanged?.Invoke(State);
+        OnRoundNumberChanged?.Invoke(RoundNumber);
     }
 
     public void RegisterFailure()
@@ -46,6 +48,7 @@ public class GameManager : MonoBehaviour
         PlayerLives--;
         if(PlayerLives <= 0)
         {
+            Debug.Log("Bad Ending");
             State = GameState.Ending_Bad;
             OnGameStateChanged?.Invoke(State);
         }
@@ -53,8 +56,9 @@ public class GameManager : MonoBehaviour
     
     public void GoToNextRound()
     {
-        if(RoundNumber > _maxRounds)
+        if(RoundNumber + 1 >= _maxRounds)
         {
+            Debug.Log("Good Ending");
             State = GameState.Ending_Good;
             OnGameStateChanged?.Invoke(State);
             return;

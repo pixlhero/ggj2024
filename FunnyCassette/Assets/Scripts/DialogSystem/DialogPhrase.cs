@@ -5,7 +5,7 @@ using System.Linq;
 [Serializable]
 public class DialogPhrase
 {
-    public string text;
+    public List<string> text;
 
     public List<string> correctOptions;
     

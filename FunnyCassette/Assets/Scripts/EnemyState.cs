@@ -1,8 +1,11 @@
+using System;
 using Unity.PlasticSCM.Editor.WebApi;
 using UnityEngine;
 
 public class EnemyState :MonoBehaviour
 {
+    public static event Action<DialogPhrase> DialogPhraseChanged;
+    
     public static EnemyState Singleton;
     
     public DialogPhrase CurrentDialogPhrase => _dialog.dialogs[_currentDialogPhraseIndex];
@@ -38,6 +41,7 @@ public class EnemyState :MonoBehaviour
     private void OnRoundNumberChanged(int roundNumber)
     {
         _currentDialogPhraseIndex = roundNumber;
+        DialogPhraseChanged?.Invoke(CurrentDialogPhrase);
     }
 
     public void ChooseCassetteType(Cassette.CassetteType type)
