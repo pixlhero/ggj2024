@@ -1,15 +1,23 @@
 {
   "dialogs": [
     {
-      "text": "Hello",
+      "text": [
+        "Why don't ghosts like rain?",
+        "Because it dampens their spirits!"
+      ],
       "correctOptions": [
         "haha",
-        "dotdotdot"
+        "LOL"
       ]
     },
     {
-      "text": "World",
+      "text": [
+        "Why did the vampire read the newspaper?",
+        "He heard it had great circulation!"
+      ],
       "correctOptions": [
+        "haha",
+        "LOL",
         "dotdotdot"
       ]
     }
