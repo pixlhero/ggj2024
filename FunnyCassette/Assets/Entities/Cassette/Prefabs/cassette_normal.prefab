@@ -1,27 +1,72 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &2068004640702903504
+--- !u!1 &1214828265210311768
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 460294579482307691}
+  - component: {fileID: 6967995741032326735}
+  m_Layer: 0
+  m_Name: Cassette_Normal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &460294579482307691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214828265210311768}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.3206778, y: -4.37651, z: -2.3752775}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 3473958419704430372}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6967995741032326735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1214828265210311768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08059d2dae94f2988b16916ad25516b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &4017003865697736911
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 460294579482307691}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 1cb4619dacfcd435d9b4c45c2892b20b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.278358
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1cb4619dacfcd435d9b4c45c2892b20b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.2785335
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1cb4619dacfcd435d9b4c45c2892b20b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.963018
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 1cb4619dacfcd435d9b4c45c2892b20b,
         type: 3}
@@ -66,10 +111,16 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 1cb4619dacfcd435d9b4c45c2892b20b,
         type: 3}
       propertyPath: m_Name
-      value: cassette_normal
+      value: cassette
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cb4619dacfcd435d9b4c45c2892b20b, type: 3}
+--- !u!4 &3473958419704430372 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1cb4619dacfcd435d9b4c45c2892b20b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4017003865697736911}
+  m_PrefabAsset: {fileID: 0}

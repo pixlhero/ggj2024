@@ -1,0 +1,17 @@
+{
+  "dialogs": [
+    {
+      "text": "Hello",
+      "correctOptions": [
+        "haha",
+        "dotdotdot"
+      ]
+    },
+    {
+      "text": "World",
+      "correctOptions": [
+        "dotdotdot"
+      ]
+    }
+  ]
+}
