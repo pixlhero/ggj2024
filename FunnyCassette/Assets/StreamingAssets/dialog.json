@@ -1,25 +1,298 @@
 {
   "dialogs": [
-    {
-      "text": [
-        "Why don't ghosts like rain?",
-        "Because it dampens their spirits!"
-      ],
-      "correctOptions": [
-        "haha",
-        "LOL"
-      ]
-    },
-    {
-      "text": [
-        "Why did the vampire read the newspaper?",
-        "He heard it had great circulation!"
-      ],
-      "correctOptions": [
-        "haha",
-        "LOL",
-        "dotdotdot"
-      ]
-    }
+      {
+          "text": [
+              "Why don't ghosts like rain?",
+              "Because it dampens their spirits!"
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why did the vampire read the newspaper?",
+              "He heard it had great circulation!"
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "A horse walks into a bar. The bartender looks up and says, 'Hey, why the long face?'"
+          ],
+          "correctOptions": [
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why don't scientists trust atoms?",
+              "Because they make up everything!"
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why don't eggs tell jokes?",
+              "They'd crack each other up!"
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why couldn't the bicycle stand up by itself?",
+              "It was two-tired!"
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "What do you call fake spaghetti?",
+              "An impasta!"
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "I told my wife she should embrace her mistakes.",
+              "She gave me a hug."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why was the math book sad?",
+              "It had too many problems."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "What do you call a belt made of watches?",
+              "A waist of time."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Did you hear about the claustrophobic astronaut?",
+              "He just needed a little space."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why did the scarecrow win an award?",
+              "Because he was outstanding in his field!"
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "What do you call a factory that sells good products?",
+              "A satisfactory."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why did the bicycle fall over?",
+              "It was too tired."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "What do you call a magician who loses his magic?",
+              "Ian."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why can't you give Elsa a balloon?",
+              "Because she will let it go."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "I'm reading a book on anti-gravity.",
+              "It's impossible to put down!"
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "How does a penguin build its house?",
+              "Igloos it together."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why did the tomato turn red?",
+              "Because it saw the salad dressing!"
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "What do you call cheese that isn't yours?",
+              "Nacho cheese!"
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why couldn't the leopard play hide and seek?",
+              "Because he was always spotted."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "What do you call an alligator in a vest?",
+              "An investigator."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why don't skeletons fight each other?",
+              "They don't have the guts."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "What do you call a pile of cats?",
+              "A meowtain."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why was the computer cold?",
+              "It left its Windows open."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "Why can't your nose be 12 inches long?",
+              "Because then it would be a foot."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      },
+      {
+          "text": [
+              "What do you get when you cross a snowman and a vampire?",
+              "Frostbite."
+          ],
+          "correctOptions": [
+              "LOL",
+              "haha",
+              "dotdotdot"
+          ]
+      }
   ]
 }
