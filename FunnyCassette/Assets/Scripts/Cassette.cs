@@ -1,5 +1,4 @@
-using System;
-using Unity.VisualScripting;
+using DG.Tweening;
 using UnityEngine;
 
 public class Cassette : MonoBehaviour
@@ -12,6 +11,8 @@ public class Cassette : MonoBehaviour
     }
     
     public CassetteType Type { get; private set; }
+
+    public Sequence Sequence;
 
     private void OnMouseDown()
     {

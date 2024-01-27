@@ -6,6 +6,7 @@ using UnityEngine.Serialization;
 public class HandCassettesState : MonoBehaviour
 {
     public static event Action<Cassette> CassetteAdded;
+    public static event Action<List<Cassette>> CassetteAddedList;
     public static event Action<Cassette> CassetteRemoved;
     
     public static HandCassettesState Singleton;
@@ -28,13 +29,17 @@ public class HandCassettesState : MonoBehaviour
             {
                 var newCassette = Deck.Singleton.DrawNewCassette();
                 Cassettes.Add(newCassette);
-                CassetteAdded?.Invoke(newCassette);
             }
         }
+        
+        CassetteAddedList?.Invoke(Cassettes);
     }
     
     public void OnRoundNumberChanged(int roundNumber)
     {
+        if (roundNumber == 0)
+            return; // don't add any cards in the first round
+        
         var newCassette = Deck.Singleton.DrawNewCassette();
         Cassettes.Add(newCassette);
         CassetteAdded?.Invoke(newCassette);
