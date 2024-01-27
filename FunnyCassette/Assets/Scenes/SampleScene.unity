@@ -1028,7 +1028,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d24f297f1245dfb2696c26302cadac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shownText: {fileID: 0}
+  textPresenter: {fileID: 1470701458}
 --- !u!4 &865098996
 Transform:
   m_ObjectHideFlags: 0
@@ -1132,10 +1132,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.35
-  m_fontSizeBase: 36
+  m_fontSize: 12
+  m_fontSizeBase: 12
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 8
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1547,6 +1547,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shownText: {fileID: 1044267272}
+  dialogTypingSoundClip: {fileID: 8300000, guid: b51ab0af470524465aacb11615a99402,
+    type: 3}
 --- !u!1 &1765317133
 GameObject:
   m_ObjectHideFlags: 0
