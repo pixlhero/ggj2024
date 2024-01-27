@@ -38,7 +38,10 @@ public class EnemyVisuals : MonoBehaviour
         _reactSequence.InsertCallback(2f,
             () => { textPresenter.PresentText(text); });
         
-        _reactSequence.InsertCallback(4f, () => { GameManager.Singleton.RegisterFailure(); });
+        if (!isGood)
+        {
+            _reactSequence.InsertCallback(3f, () => { GameManager.Singleton.RegisterFailure(); });
+        }
         
         _reactSequence.InsertCallback(6f, () => { textPresenter.PresentText("Ok, next joke."); });
 
