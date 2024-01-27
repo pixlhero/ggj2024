@@ -1,6 +1,5 @@
-using System.Collections;
+
 using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 
 public class AudioHandler : MonoBehaviour
@@ -19,6 +18,9 @@ public class AudioHandler : MonoBehaviour
 
     [SerializeField]
     private AudioSource effects_childLaugh;
+
+    [SerializeField]
+    private AudioSource effects_bonk;
 
     private AudioSource shared_source;
     private AudioClip current_clip;
@@ -82,16 +84,23 @@ public class AudioHandler : MonoBehaviour
         effects_childLaugh.Play();
     }
 
+    public void Play_Effect_Bonk()
+    {
+        effects_bonk.Play();
+    }
+
     /*
         Ambiance and Music Audio Effects
     */
     public void Play_Ambiance_Drone()
     {
+        if (ambiance_drone.isPlaying == true) return;
+        
         ambiance_drone.Play();
     }
 
     public void Stop_Ambiance_Drone()
     {
-        ambiance_drone.Stop();
+        if (ambiance_drone.isPlaying == true) ambiance_drone.Stop();
     }
 }

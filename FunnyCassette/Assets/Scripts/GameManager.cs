@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     public static event Action PlayerTurnStarted;
     public static event EnemyReacted EnemyReactionStarted;
     public delegate void EnemyReacted(bool isGood, string text);
-    
+
     public static event Action EndingGoodStarted;
     public static event Action EndingBadStarted;
 
@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     public DialogPhrase CurrentDialogPhrase => _dialog.dialogs[RoundNumber];
     private Dialog _dialog;
-    
+
     public enum GameState
     {
         Starting,
@@ -43,7 +43,7 @@ public class GameManager : MonoBehaviour
         Ending_Good,
         Ending_Bad
     }
-    
+
     [SerializeField] private CinemachineImpulseSource cinemachineImpulseSource;
 
     void Awake()
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         InitializeAudio();
-        
+
         State = GameState.EnemyTalks;
         OnRoundNumberChanged?.Invoke(RoundNumber);
         EnemyTalksStarted?.Invoke(CurrentDialogPhrase);
@@ -81,9 +81,10 @@ public class GameManager : MonoBehaviour
     {
         AudioHandler.singleton.Play_Effect_VeryBad();
         cinemachineImpulseSource.GenerateImpulse();
+        AudioHandler.singleton.Stop_Ambiance_Drone();
 
         PlayerLives--;
-        
+
         if (PlayerLives <= 0)
         {
             Debug.Log("Bad Ending");
@@ -115,7 +116,8 @@ public class GameManager : MonoBehaviour
         EnemyTalksStarted?.Invoke(CurrentDialogPhrase);
     }
 
-    private void InitializeAudio() {
+    private void InitializeAudio()
+    {
         AudioHandler.singleton.Play_Ambiance_Drone();
     }
 }

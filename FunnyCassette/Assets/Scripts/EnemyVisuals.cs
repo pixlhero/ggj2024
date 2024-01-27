@@ -17,7 +17,7 @@ public class EnemyVisuals : MonoBehaviour
         GameManager.EnemyTalksStarted += OnEnemeyTalksState;
         GameManager.EnemyReactionStarted += OnReact;
 
-        
+
     }
 
     private void OnEnemeyTalksState(DialogPhrase newPhrase)
@@ -30,7 +30,7 @@ public class EnemyVisuals : MonoBehaviour
         }
 
         textPresenter.PresentText(concatenatedText);
-        
+
         GameManager.Singleton.EnemyFinishedTalking();
         _reactSequence = DOTween.Sequence();
         _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(concatenatedText));
@@ -40,35 +40,42 @@ public class EnemyVisuals : MonoBehaviour
     private void OnReact(bool isGood, string text)
     {
         textPresenter.PresentText("");
-        
+
         _reactSequence?.Kill();
         _reactSequence = DOTween.Sequence();
         _reactSequence.AppendInterval(2f); // suspense
-        
+
         _reactSequence.AppendCallback(() =>
         {
-             _animator.SetBool("isUpset", !isGood);
+            _animator.SetBool("isUpset", !isGood);
             textPresenter.PresentText(text);
         });
         _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(text) + 2f);
-        
+
         if (!isGood)
         {
             _reactSequence.AppendCallback(() => { GameManager.Singleton.RegisterFailure(); });
         }
 
+
         var okNextText = "Anyway...";
-        
+
         _reactSequence.AppendCallback(() =>
         {
-             _animator.SetBool("isUpset", false);
+            _animator.SetBool("isUpset", false);
             textPresenter.PresentText(okNextText);
         });
+
         _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(okNextText) + 2f);
-        
+
         _reactSequence.OnComplete(() =>
         {
             GameManager.Singleton.EnemyReactionFinished();
+        });
+
+        _reactSequence.AppendCallback(() =>
+        {
+            AudioHandler.singleton.Play_Ambiance_Drone();
         });
     }
 }
