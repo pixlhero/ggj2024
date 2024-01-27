@@ -17,7 +17,7 @@ public class EnemyVisuals : MonoBehaviour
         GameManager.EnemyTalksStarted += OnEnemeyTalksState;
         GameManager.EnemyReactionStarted += OnReact;
 
-
+        AnimationEvents.OnHitEvent += OnHitEvent;
     }
 
     private void OnEnemeyTalksState(DialogPhrase newPhrase)
@@ -52,12 +52,6 @@ public class EnemyVisuals : MonoBehaviour
         });
         _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(text) + 2f);
 
-        if (!isGood)
-        {
-            _reactSequence.AppendCallback(() => { GameManager.Singleton.RegisterFailure(); });
-        }
-
-
         var okNextText = "Anyway...";
 
         _reactSequence.AppendCallback(() =>
@@ -77,5 +71,10 @@ public class EnemyVisuals : MonoBehaviour
         {
             AudioHandler.singleton.Play_Ambiance_Drone();
         });
+    }
+
+    private void OnHitEvent()
+    {
+        GameManager.Singleton.RegisterFailure();
     }
 }
