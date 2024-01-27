@@ -4,15 +4,27 @@ using UnityEngine;
 
 public class CursorController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Texture2D cursor;
+    [SerializeField] private Texture2D cursorHover;
+
+    public static CursorController singleton;
+
+    private void Awake()
     {
-        
+        singleton = this;
+
+        Pointer();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void ChangeCursor(Texture2D cursor) {
+        Cursor.SetCursor(cursor, new Vector2(0, 0), CursorMode.Auto);
+    }
+
+    public void Pointer() {
+        ChangeCursor(cursor);
+    }
+
+    public void Hover() {
+        ChangeCursor(cursorHover);
     }
 }
