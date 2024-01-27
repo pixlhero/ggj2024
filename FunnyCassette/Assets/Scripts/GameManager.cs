@@ -7,68 +7,99 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static event Action<GameState> OnGameStateChanged;
+    // state events
+    public static event Action StartingStarted;
+    public static event Action<DialogPhrase> EnemyTalksStarted;
+    public static event Action PlayerTurnStarted;
+    public static event EnemyReacted EnemyReactionStarted;
+    public delegate void EnemyReacted(bool isGood, string text);
+    
+    public static event Action EndingGoodStarted;
+    public static event Action EndingBadStarted;
+
+    // other events
     public static event Action<int> OnRoundNumberChanged;
     public static event Action<int> OnGameLivesChanged;
-    
+
     private int _maxRounds;
     public int RoundNumber { get; private set; } = 0;
-    
+
     public int PlayerLives { get; private set; } = 3;
-    
+
     public static GameManager Singleton;
-    
+
     public GameState State { get; private set; } = GameState.Starting;
+
+    public DialogPhrase CurrentDialogPhrase => _dialog.dialogs[RoundNumber];
+    private Dialog _dialog;
     
     public enum GameState
     {
         Starting,
-        Playing,
+        EnemyTalks,
+        PlayerTurn,
+        EnemyReaction,
         Ending_Good,
         Ending_Bad
     }
-    
+
     void Awake()
     {
         Singleton = this;
 
-        var dialog = Dialog.CreateFromJSON();
-        _maxRounds = dialog.dialogs.Count;
+        _dialog = Dialog.CreateFromJSON();
+        _maxRounds = _dialog.dialogs.Count;
     }
 
     private void Start()
     {
-        State = GameState.Playing;
-        OnGameStateChanged?.Invoke(State);
-        OnRoundNumberChanged?.Invoke(RoundNumber);
-
         AudioHandler.singleton.Play_Ambiance_Drone();
+        State = GameState.EnemyTalks;
+        OnRoundNumberChanged?.Invoke(RoundNumber);
+        EnemyTalksStarted?.Invoke(CurrentDialogPhrase);
+    }
+
+    public void EnemyFinishedTalking()
+    {
+        State = GameState.PlayerTurn;
+        PlayerTurnStarted?.Invoke();
+    }
+
+    public void RegisterCassetteChoice(Cassette.CassetteType type)
+    {
+        var correct = CurrentDialogPhrase.IsCorrectOption(type);
+        State = GameState.EnemyReaction;
+        EnemyReactionStarted?.Invoke(correct, "reaction text goes here");
     }
 
     public void RegisterFailure()
     {
         AudioHandler.singleton.Play_Effect_VeryBad();
-        
         PlayerLives--;
-        if(PlayerLives <= 0)
+        if (PlayerLives <= 0)
         {
             Debug.Log("Bad Ending");
             State = GameState.Ending_Bad;
-            OnGameStateChanged?.Invoke(State);
+            EndingBadStarted?.Invoke();
         }
     }
-    
-    public void GoToNextRound()
+
+    public void EnemyReactionFinished()
     {
-        if(RoundNumber + 1 >= _maxRounds)
+        // go to next round
+
+        // check if was last round
+        if (State != GameState.Ending_Bad && RoundNumber + 1 >= _maxRounds)
         {
             Debug.Log("Good Ending");
             State = GameState.Ending_Good;
-            OnGameStateChanged?.Invoke(State);
+            EndingGoodStarted?.Invoke();
             return;
         }
-        
+
+        State = GameState.EnemyTalks;
         RoundNumber++;
         OnRoundNumberChanged?.Invoke(RoundNumber);
+        EnemyTalksStarted?.Invoke(CurrentDialogPhrase);
     }
 }
