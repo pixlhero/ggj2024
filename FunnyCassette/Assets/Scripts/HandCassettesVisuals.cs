@@ -11,6 +11,8 @@ public class HandCassettesVisuals : MonoBehaviour
     
     [SerializeField] private Transform drawingOriginTransform;
     
+    private Cassette _lastPlayedCassette;
+    
     private void Awake()
     {
         HandCassettesState.CassetteAdded += OnCassetteAdded;
@@ -20,6 +22,9 @@ public class HandCassettesVisuals : MonoBehaviour
     
     private void OnCassetteAdded(Cassette newCassette)
     {
+        if (_lastPlayedCassette != null)
+            Destroy(_lastPlayedCassette.gameObject);
+        
         newCassette.transform.SetParent(transform);
         newCassette.transform.position = drawingOriginTransform.position;
         newCassette.transform.rotation = drawingOriginTransform.rotation;
@@ -74,6 +79,7 @@ public class HandCassettesVisuals : MonoBehaviour
 
     private void OnCassetteRemoved(Cassette cassette)
     {
+        _lastPlayedCassette = cassette;
         cassette.transform.SetParent(null);
         
         cassette.Sequence?.Kill();
@@ -86,8 +92,8 @@ public class HandCassettesVisuals : MonoBehaviour
             cassette.transform
                 .DORotate(playingDestinationTransform.rotation.eulerAngles, 0.3f)
         );
-        cassette.Sequence.OnComplete(() => Destroy(cassette));
 
+        /*
         foreach (var remainingCassette in HandCassettesState.Singleton.Cassettes)
         {
             var newLocalPos = GetLocalPosition(remainingCassette);
@@ -98,6 +104,7 @@ public class HandCassettesVisuals : MonoBehaviour
                     .DOLocalMove(newLocalPos, 0.3f)
             );
         }
+        */
         
     }
 
