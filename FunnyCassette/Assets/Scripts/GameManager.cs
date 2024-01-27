@@ -41,10 +41,14 @@ public class GameManager : MonoBehaviour
         State = GameState.Playing;
         OnGameStateChanged?.Invoke(State);
         OnRoundNumberChanged?.Invoke(RoundNumber);
+
+        AudioHandler.singleton.Play_Ambiance_Drone();
     }
 
     public void RegisterFailure()
     {
+        AudioHandler.singleton.Play_Effect_VeryBad();
+        
         PlayerLives--;
         if(PlayerLives <= 0)
         {
