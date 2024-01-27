@@ -1,47 +1,51 @@
 {
   "dialogs": [
-      {
-          "text": [
-              "Why don't ghosts like rain?",
-              "Because it dampens their spirits!"
-          ],
-          "correctOptions": [
-              "haha"
-          ],
-          "goodReaction": "Funny, right?",
-          "badReaction": "Why, don't you like my joke!?"
-      },
-      {
-          "text": [
-              "My dog died last week.",
-              "It was very sad..."
-          ],
-          "correctOptions": [
-              "ohno"
-          ],
-          "goodReaction": "Your sadness touches my heart",
-          "badReaction": "You don't care about my dog?!"
-      },
-      {
-          "text": [
-              "This next one is gonna be great!",
-              "I hope you're ready for it!"
-          ],
-          "correctOptions": [
-              "dotdotdot"
-          ],
-          "goodReaction": "Ok, here it goes!",
-          "badReaction": "Hey, I haven't even told you my joke yet!"
-      },
-      {
-          "text": [
-              "A horse walks into a bar. The bartender looks up and says, 'Hey, why the long face?'"
-          ],
-          "correctOptions": [
-              "haha"
-          ],
-          "goodReaction": "A good one. Huh?",
-          "badReaction": "How dare you!"
-      }
+    {
+      "text": [
+        "Why don't ghosts like rain?",
+        "Because it dampens their spirits!"
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "goodReaction": "Funny, right?",
+      "badReaction": "Why, don't you like my joke!?",
+      "next": "Anyway..."
+    },
+    {
+      "text": [
+        "My dog died last week.",
+        "It was very sad..."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "goodReaction": "Your sadness touches my heart",
+      "badReaction": "You don't care about my dog?!",
+      "next": "Anyway..."
+    },
+    {
+      "text": [
+        "This next one is gonna be great!",
+        "I hope you're ready for it!"
+      ],
+      "correctOptions": [
+        "dotdotdot"
+      ],
+      "goodReaction": "Ok, here it goes!",
+      "badReaction": "Hey, I haven't even told you my joke yet!",
+      "next": "Hehe"
+    },
+    {
+      "text": [
+        "A horse walks into a bar. The bartender looks up and says, 'Hey, why the long face?'"
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "goodReaction": "A good one. Huh?",
+      "badReaction": "How dare you!",
+      "next": "Anyway..."
+    }
   ]
 }

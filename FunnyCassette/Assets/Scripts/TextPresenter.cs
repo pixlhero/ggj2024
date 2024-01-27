@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class TextPresenter : MonoBehaviour
@@ -6,16 +7,17 @@ public class TextPresenter : MonoBehaviour
     [SerializeField] TMPro.TMP_Text shownText;
     [SerializeField] private AudioClip[] dialogTypingSoundClips;
     [SerializeField] private bool stopAudioSource;
-    [SerializeField][Range(-3, 3)] private float minPitch = .5f;
-    [SerializeField][Range(-3, 3)] private float maxPitch = 3;
-    [SerializeField][Range(1, 5)] private int frequencyLevel = 1;
-    [SerializeField][Range(0.01f, 0.5f)] private float charWaitingTime = 0.1f;
+    [SerializeField] [Range(-3, 3)] private float minPitch = .5f;
+    [SerializeField] [Range(-3, 3)] private float maxPitch = 3;
+    [SerializeField] [Range(1, 5)] private int frequencyLevel = 1;
+    [SerializeField] [Range(0.01f, 0.5f)] private float charWaitingTime = 0.1f;
+    [SerializeField] [Range(0.01f, 2f)] private float sentenceWaitingTime = 0.5f;
     [SerializeField] private bool predictableSpeech;
 
 
-    private const string inbisibleTag = "<color=#0000>";
+    private const string invisibleTag = "<color=#0000>";
 
-    private string _shownText;
+    private List<string> _shownText;
 
     private AudioSource audioSource;
     private Coroutine presentTextCoroutine;
@@ -28,28 +30,67 @@ public class TextPresenter : MonoBehaviour
 
     public float CalculateSpeechTime(string text)
     {
-        return charWaitingTime * text.Length;
+        return CalculateSpeechTime(new List<string>() { text });
+    }
+
+    public float CalculateSpeechTime(List<string> text)
+    {
+        float speechTime = 0;
+        foreach (var sentence in text)
+        {
+            speechTime += sentence.Length * charWaitingTime;
+        }
+        speechTime += (text.Count - 1) * sentenceWaitingTime;
+        return speechTime;
     }
 
     public void PresentText(string text)
     {
+        if (text.Length == 0)
+        {
+            shownText.text = "";
+            return;
+        }
+        PresentText(new List<string> { text });
+    }
+
+    public void PresentText(List<string> text)
+    {
         _shownText = text;
-        if(presentTextCoroutine != null)
+        if (presentTextCoroutine != null)
             StopCoroutine(presentTextCoroutine);
-        
+
         presentTextCoroutine = StartCoroutine(PrintText());
     }
 
     private IEnumerator PrintText()
     {
-        for (var textIndex = 0; textIndex < _shownText.Length; textIndex++)
+        var isFirstSentence = true;
+        var fullText = "";
+        foreach (var sentence in _shownText)
+            fullText += sentence + " ";
+        
+        shownText.text = invisibleTag + fullText;
+        
+        
+        var textIndex = 0;
+        foreach (var sentence in _shownText)
         {
-            var text = _shownText.Substring(0, textIndex);
-            text += inbisibleTag;
-            text += _shownText.Substring(textIndex);
-            shownText.text = text;
-            PlayDialogSound(textIndex, _shownText[textIndex]);
-            yield return new WaitForSeconds(charWaitingTime);
+            if (!isFirstSentence)
+                yield return new WaitForSeconds(sentenceWaitingTime);
+            
+            for (var sentenceIndex = 0; sentenceIndex <= sentence.Length; sentenceIndex++)
+            {
+                var text = fullText.Substring(0, textIndex);
+                text += invisibleTag;
+                text += fullText.Substring(textIndex);
+                shownText.text = text;
+                PlayDialogSound(textIndex, fullText[textIndex]);
+                yield return new WaitForSeconds(charWaitingTime);
+                textIndex++;
+            }
+
+            isFirstSentence = false;
         }
     }
 
@@ -72,11 +113,14 @@ public class TextPresenter : MonoBehaviour
                 int maxPitchInt = (int)(maxPitch * 100);
                 int pitchRangeInt = maxPitchInt - minPitchInt;
 
-                if (pitchRangeInt != 0) {
+                if (pitchRangeInt != 0)
+                {
                     int predictablePitchInt = (hashCode % pitchRangeInt) + minPitchInt;
                     float predictablePitch = predictablePitchInt / 100f;
                     audioSource.pitch = predictablePitch;
-                } else {
+                }
+                else
+                {
                     audioSource.pitch = minPitch;
                 }
             }
@@ -86,7 +130,6 @@ public class TextPresenter : MonoBehaviour
                 int randomIndex = Random.Range(0, dialogTypingSoundClips.Length);
                 soundClip = dialogTypingSoundClips[randomIndex];
                 audioSource.pitch = Random.Range(minPitch, maxPitch);
-
             }
 
             audioSource.PlayOneShot(soundClip);
