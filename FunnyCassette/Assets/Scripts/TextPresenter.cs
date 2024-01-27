@@ -4,7 +4,7 @@ using UnityEngine;
 public class TextPresenter : MonoBehaviour
 {
     [SerializeField] TMPro.TMP_Text shownText;
-    [SerializeField] private AudioClip dialogTypingSoundClip;
+    [SerializeField] private AudioClip[] dialogTypingSoundClips;
     [SerializeField] private bool stopAudioSource;
     [SerializeField][Range(-3, 3)] private float minPitch = .5f;
     [SerializeField][Range(-3, 3)] private float maxPitch = 3;
@@ -23,12 +23,6 @@ public class TextPresenter : MonoBehaviour
 
     public float CalculateSpeechTime(string text) {
         var buffer = 2;
-
-        Debug.Log("--- CALCULATE DIN MUETTER DU FICKER ---");
-        Debug.Log(text);
-        Debug.Log(text.Length);
-        Debug.Log(buffer);
-        Debug.Log("--- FERTIG ---");
 
         return charWaitingTime * text.Length + buffer;
     }
@@ -64,9 +58,12 @@ public class TextPresenter : MonoBehaviour
             if (stopAudioSource)
                 audioSource.Stop();
 
+            // select sound clip
+            int randomIndex = Random.Range(0, dialogTypingSoundClips.Length);
+
             audioSource.pitch = Random.Range(minPitch, maxPitch);
 
-            audioSource.PlayOneShot(dialogTypingSoundClip);
+            audioSource.PlayOneShot(dialogTypingSoundClips[randomIndex]);
         }
     }
 }
