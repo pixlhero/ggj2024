@@ -30,7 +30,7 @@ public class CameraController : MonoBehaviour
     void Update()
     {
         var mousePos = Input.mousePosition;
-        var normalizedMousePos = Camera.main.ScreenToViewportPoint(mousePos);
+        var normalizedMousePos = Camera.main.ScreenToViewportPoint(mousePos) - (Vector3.one * 0.5f);
         var angleInfluence = normalizedMousePos * mouseInfluence;
         var newCameraRotation = Quaternion.Euler(-angleInfluence.y, angleInfluence.x, 0);
         mainVirtualCamera.transform.rotation = _initialCameraRotation * newCameraRotation;
