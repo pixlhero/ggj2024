@@ -53,7 +53,8 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        AudioHandler.singleton.Play_Ambiance_Drone();
+        InitializeAudio();
+        
         State = GameState.EnemyTalks;
         OnRoundNumberChanged?.Invoke(RoundNumber);
         EnemyTalksStarted?.Invoke(CurrentDialogPhrase);
@@ -101,5 +102,11 @@ public class GameManager : MonoBehaviour
         RoundNumber++;
         OnRoundNumberChanged?.Invoke(RoundNumber);
         EnemyTalksStarted?.Invoke(CurrentDialogPhrase);
+    }
+
+    private void InitializeAudio() {
+        AudioHandler.singleton.Play_Ambiance_Drone();
+        StartCoroutine(AudioPlayerManager.singleton.PlayHeartbeatRandomly());
+        StartCoroutine(AudioPlayerManager.singleton.PlayKnockingRandomly());
     }
 }
