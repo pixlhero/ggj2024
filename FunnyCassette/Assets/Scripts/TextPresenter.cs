@@ -34,7 +34,9 @@ public class TextPresenter : MonoBehaviour
     public void PresentText(string text)
     {
         _shownText = text;
-        StopCoroutine(presentTextCoroutine);
+        if(presentTextCoroutine != null)
+            StopCoroutine(presentTextCoroutine);
+        
         presentTextCoroutine = StartCoroutine(PrintText());
     }
 
