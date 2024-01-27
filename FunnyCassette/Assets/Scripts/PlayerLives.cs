@@ -6,7 +6,7 @@ public class PlayerLives : MonoBehaviour
     
     private void Awake()
     {
-        GameManager.OnGameLivesChanged += OnGameLivesChanged;
+        GameManager.LivesChanged += OnGameLivesChanged;
     }
 
     private void OnGameLivesChanged(int lives)

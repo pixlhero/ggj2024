@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 
 public class Cassette : MonoBehaviour
@@ -8,18 +9,24 @@ public class Cassette : MonoBehaviour
     {
         DotDotDot,
         Haha,
-        Cry
+        OhNo,
     }
 
     [SerializeField] private Transform modelTransform;
     [SerializeField] private Transform hoverModelTransform;
     [SerializeField] private Transform normalModelTransform;
 
+    [SerializeField] private Renderer cassetteRenderer;
+
+    [SerializeField] private TMP_Text labelText;
+
     private Sequence _localModelSequence;
 
     private Collider _collider;
     
-    public CassetteType Type { get; private set; }
+    public CassetteLabel TypeData{ get; private set;}
+
+    public CassetteType Type => TypeData.type;
 
     public Sequence Sequence;
 
@@ -37,6 +44,13 @@ public class Cassette : MonoBehaviour
     private void Update()
     {
         _collider.enabled = GameManager.Singleton.State == GameManager.GameState.PlayerTurn;
+    }
+    
+    public void SetTypeData(CassetteLabel label)
+    {
+        TypeData = label;
+        labelText.text = label.text;
+        cassetteRenderer.material = label.material;
     }
 
     private void OnMouseDown()

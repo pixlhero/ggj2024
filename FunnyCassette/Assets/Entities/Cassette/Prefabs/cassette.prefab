@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6967995741032326735}
   - component: {fileID: 2325212071943687523}
   m_Layer: 0
-  m_Name: Cassette_Normal
+  m_Name: cassette
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,6 +51,8 @@ MonoBehaviour:
   modelTransform: {fileID: 3605110484425772827}
   hoverModelTransform: {fileID: 1223378542099846480}
   normalModelTransform: {fileID: 6052201853274217646}
+  cassetteRenderer: {fileID: 2341544264760706123}
+  labelText: {fileID: 4135961275997138786}
 --- !u!65 &2325212071943687523
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -477,6 +479,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1cb4619dacfcd435d9b4c45c2892b20b, type: 3}
+--- !u!23 &2341544264760706123 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -7511558181221131132, guid: 1cb4619dacfcd435d9b4c45c2892b20b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4017003865697736911}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3473958419704430372 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1cb4619dacfcd435d9b4c45c2892b20b,

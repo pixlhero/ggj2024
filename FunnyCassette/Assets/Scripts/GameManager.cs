@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour
 
     // other events
     public static event Action<int> OnRoundNumberChanged;
-    public static event Action<int> OnGameLivesChanged;
+    public static event Action<int> LivesChanged;
 
     private int _maxRounds;
     public int RoundNumber { get; private set; } = 0;
@@ -83,6 +83,10 @@ public class GameManager : MonoBehaviour
             Debug.Log("Bad Ending");
             State = GameState.Ending_Bad;
             EndingBadStarted?.Invoke();
+        }
+        else
+        {
+            LivesChanged?.Invoke(PlayerLives);
         }
     }
 

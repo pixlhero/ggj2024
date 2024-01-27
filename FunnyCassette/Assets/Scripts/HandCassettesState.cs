@@ -24,12 +24,7 @@ public class HandCassettesState : MonoBehaviour
     {
         if (GameManager.Singleton.RoundNumber == 0)
         {
-            for (int i = 0; i < 3; i++)
-            {
-                var newCassette = Deck.Singleton.DrawNewCassette();
-                Cassettes.Add(newCassette);
-            }
-
+            Cassettes = Deck.Singleton.GetStarterCassettes();
             CassetteAddedList?.Invoke(Cassettes);
         }
         else
