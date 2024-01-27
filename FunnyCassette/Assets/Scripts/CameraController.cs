@@ -24,6 +24,9 @@ public class CameraController : MonoBehaviour
     private void Start()
     {
         GameManager.LivesChanged += OnLiveChanged;
+        
+        tableLight.transform.DOLocalRotate(new Vector3(50f, -90f, -90f), 5f).SetEase(Ease.InOutSine)
+            .SetLoops(-1, LoopType.Yoyo);
     }
 
     // Update is called once per frame
