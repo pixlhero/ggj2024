@@ -120,5 +120,6 @@ public class GameManager : MonoBehaviour
     private void InitializeAudio()
     {
         AudioHandler.singleton.Play_Ambiance_Drone();
+        AudioHandler.singleton.Play_Ambiance_Vinyl();
     }
 }
