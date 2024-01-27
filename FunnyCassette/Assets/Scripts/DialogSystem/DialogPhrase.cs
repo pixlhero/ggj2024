@@ -13,6 +13,8 @@ public class DialogPhrase
 
     public string badReaction;
     
+    public string next;
+    
     public bool IsCorrectOption(Cassette.CassetteType option)
     {
         return correctOptions.Any(strOp => strOp.ToLower() == option.ToString().ToLower());

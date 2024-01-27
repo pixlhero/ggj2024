@@ -13,7 +13,7 @@ public class GameManager : MonoBehaviour
     public static event Action<DialogPhrase> EnemyTalksStarted;
     public static event Action PlayerTurnStarted;
     public static event EnemyReacted EnemyReactionStarted;
-    public delegate void EnemyReacted(bool isGood, string text);
+    public delegate void EnemyReacted(bool isGood, string text, string nextText);
 
     public static event Action EndingGoodStarted;
     public static event Action EndingBadStarted;
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         var correct = CurrentDialogPhrase.IsCorrectOption(type);
         State = GameState.EnemyReaction;
         var reactionText = correct ? CurrentDialogPhrase.goodReaction : CurrentDialogPhrase.badReaction;
-        EnemyReactionStarted?.Invoke(correct, reactionText);
+        EnemyReactionStarted?.Invoke(correct, reactionText, CurrentDialogPhrase.next);
     }
 
     public void RegisterFailure()
