@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class EnemyVisuals : MonoBehaviour
 {
-    [SerializeField] TMPro.TMP_Text shownText;
+    [SerializeField] TextPresenter textPresenter;
 
     private const string invisibleTag = "<color=#0000>";
 
@@ -23,23 +23,24 @@ public class EnemyVisuals : MonoBehaviour
             concatenatedText += text + " ";
         }
 
-        shownText.text = concatenatedText;
+        textPresenter.PresentText(concatenatedText);
 
         GameManager.Singleton.EnemyFinishedTalking();
     }
 
     private void OnReact(bool isGood, string text)
     {
-        shownText.text = "";
+        textPresenter.PresentText("");
+        
         _reactSequence?.Kill();
         _reactSequence = DOTween.Sequence();
         
         _reactSequence.InsertCallback(2f,
-            () => { shownText.text = text; });
+            () => { textPresenter.PresentText(text); });
         
         _reactSequence.InsertCallback(4f, () => { GameManager.Singleton.RegisterFailure(); });
         
-        _reactSequence.InsertCallback(6f, () => { shownText.text = "Ok, next joke."; });
+        _reactSequence.InsertCallback(6f, () => { textPresenter.PresentText("Ok, next joke."); });
 
         _reactSequence.AppendInterval(1f);
         
