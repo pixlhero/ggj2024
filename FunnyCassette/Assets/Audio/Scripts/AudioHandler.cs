@@ -16,6 +16,9 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private AudioSource effects_veryBad;
 
+    [SerializeField]
+    private AudioSource effects_childLaugh;
+
     public static AudioHandler singleton;
 
     private void Awake()
@@ -39,6 +42,11 @@ public class AudioHandler : MonoBehaviour
     public void Play_Effect_Knocking()
     {
         effects_knocking.Play();
+    }
+
+    public void Play_Effect_ChildLaugh()
+    {
+        effects_childLaugh.Play();
     }
 
     /*

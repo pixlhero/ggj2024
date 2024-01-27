@@ -1223,7 +1223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 13.9}
+  m_AnchoredPosition: {x: 0, y: 17.9}
   m_SizeDelta: {x: 200, y: 27.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1044267272
@@ -1689,6 +1689,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shownText: {fileID: 1044267272}
+  dialogTypingSoundClip: {fileID: 8300000, guid: b51ab0af470524465aacb11615a99402,
+    type: 3}
+  stopAudioSource: 0
+  minPitch: 0.5
+  maxPitch: 0.6
+  frequencyLevel: 2
 --- !u!1 &1486268603
 GameObject:
   m_ObjectHideFlags: 0
