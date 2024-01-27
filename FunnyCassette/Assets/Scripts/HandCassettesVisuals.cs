@@ -84,7 +84,7 @@ public class HandCassettesVisuals : MonoBehaviour
         );
         cassette.Sequence.Insert(0,
             cassette.transform
-                .DORotate(playingDestinationTransform.rotation.eulerAngles, 1f)
+                .DORotate(playingDestinationTransform.rotation.eulerAngles, 0.3f)
         );
         cassette.Sequence.OnComplete(() => Destroy(cassette));
 
