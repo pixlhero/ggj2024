@@ -123,34 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &17172757 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3716390284754058284, guid: 92e5b2f6664f44b1a88a0f7139159f51,
-    type: 3}
-  m_PrefabInstance: {fileID: 527793626}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &17172760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17172757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0c11265b855408d42af33d62691f5194, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ChannelMask: 1
-  m_Gain: 1
-  m_Use2DDistance: 0
-  m_UseLocalSpace: 1
-  m_ReactionSettings:
-    m_SecondaryNoise: {fileID: 0}
-    m_AmplitudeGain: 2
-    m_FrequencyGain: 2
-    m_Duration: 1
-    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &248143474
 GameObject:
   m_ObjectHideFlags: 0
@@ -624,15 +596,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3716390284754058284, guid: 92e5b2f6664f44b1a88a0f7139159f51,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 17172760}
-    - targetCorrespondingSourceObject: {fileID: 2183597925002913351, guid: 92e5b2f6664f44b1a88a0f7139159f51,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1355858975}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92e5b2f6664f44b1a88a0f7139159f51, type: 3}
 --- !u!1 &707288353
 GameObject:
@@ -999,35 +963,6 @@ MonoBehaviour:
   - {fileID: 1955470964}
   - {fileID: 707288353}
   - {fileID: 248143474}
---- !u!1 &1355858971 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2183597925002913351, guid: 92e5b2f6664f44b1a88a0f7139159f51,
-    type: 3}
-  m_PrefabInstance: {fileID: 527793626}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1355858975
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355858971}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ApplyAfter: 2
-  m_ChannelMask: 1
-  m_Gain: 1
-  m_Use2DDistance: 0
-  m_UseCameraSpace: 1
-  m_ReactionSettings:
-    m_SecondaryNoise: {fileID: 0}
-    m_AmplitudeGain: 2
-    m_FrequencyGain: 2
-    m_Duration: 1
-    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1360128458
 GameObject:
   m_ObjectHideFlags: 0
