@@ -1466,6 +1466,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2355856161326184414, guid: 4b321e0ab81fb423c9c30a0c7fe97184,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.728
+      objectReference: {fileID: 0}
     - target: {fileID: 3460660629069038380, guid: 4b321e0ab81fb423c9c30a0c7fe97184,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -1520,6 +1525,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudioHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 6398316503650866760, guid: 4b321e0ab81fb423c9c30a0c7fe97184,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.721
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
