@@ -5,6 +5,8 @@ public class EnemyVisuals : MonoBehaviour
 {
     [SerializeField] TextPresenter textPresenter;
 
+    [SerializeField] private Animator _animator;
+
     private const string invisibleTag = "<color=#0000>";
 
     private Sequence _reactSequence;
@@ -17,6 +19,7 @@ public class EnemyVisuals : MonoBehaviour
 
     private void OnEnemeyTalksState(DialogPhrase newPhrase)
     {
+        _animator.SetBool("isReading", true);
         var concatenatedText = "";
         foreach (var text in newPhrase.text)
         {
@@ -24,8 +27,11 @@ public class EnemyVisuals : MonoBehaviour
         }
 
         textPresenter.PresentText(concatenatedText);
-
+        
         GameManager.Singleton.EnemyFinishedTalking();
+        _reactSequence = DOTween.Sequence();
+        _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(concatenatedText));
+        _reactSequence.AppendCallback(() => { _animator.SetBool("isReading", false); });
     }
 
     private void OnReact(bool isGood, string text)
@@ -40,6 +46,7 @@ public class EnemyVisuals : MonoBehaviour
         
         if (!isGood)
         {
+             _animator.SetBool("isUpset", true);
             _reactSequence.AppendCallback(() => { GameManager.Singleton.RegisterFailure(); });
         }
 
