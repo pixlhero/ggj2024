@@ -47,6 +47,7 @@ public class EnemyVisuals : MonoBehaviour
 
         _reactSequence.AppendCallback(() =>
         {
+            _animator.SetBool("isHappy", isGood);
             _animator.SetBool("isUpset", !isGood);
             textPresenter.PresentText(text);
         });
@@ -56,6 +57,7 @@ public class EnemyVisuals : MonoBehaviour
 
         _reactSequence.AppendCallback(() =>
         {
+            _animator.SetBool("isHappy", false);
             _animator.SetBool("isUpset", false);
             textPresenter.PresentText(okNextText);
         });
