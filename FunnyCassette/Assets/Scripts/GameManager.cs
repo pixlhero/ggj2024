@@ -80,6 +80,7 @@ public class GameManager : MonoBehaviour
     public void RegisterFailure()
     {
         AudioHandler.singleton.Play_Effect_VeryBad();
+        AudioHandler.singleton.Play_Effect_Bonk();
         cinemachineImpulseSource.GenerateImpulse();
         AudioHandler.singleton.Stop_Ambiance_Drone();
 
