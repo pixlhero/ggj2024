@@ -8,6 +8,9 @@ public class AudioHandler : MonoBehaviour
     private AudioSource ambiance_drone;
 
     [SerializeField]
+    private AudioSource ambiance_vinyl;
+
+    [SerializeField]
     private AudioSource effects_knocking;
 
     [SerializeField]
@@ -21,6 +24,12 @@ public class AudioHandler : MonoBehaviour
 
     [SerializeField]
     private AudioSource effects_bonk;
+
+    [SerializeField]
+    private AudioSource effects_putinCassette;
+
+    [SerializeField]
+    private AudioSource effects_dropCassette;
 
     private AudioSource shared_source;
     private AudioClip current_clip;
@@ -89,6 +98,16 @@ public class AudioHandler : MonoBehaviour
         effects_bonk.Play();
     }
 
+    public void Play_Effect_PutinCassette()
+    {
+        effects_putinCassette.Play();
+    }
+
+    public void Play_Effect_DropCassette()
+    {
+        effects_dropCassette.Play();
+    }
+
     /*
         Ambiance and Music Audio Effects
     */
@@ -102,5 +121,17 @@ public class AudioHandler : MonoBehaviour
     public void Stop_Ambiance_Drone()
     {
         if (ambiance_drone.isPlaying == true) ambiance_drone.Stop();
+    }
+
+    public void Play_Ambiance_Vinyl()
+    {
+        if (ambiance_vinyl.isPlaying == true) return;
+        
+        ambiance_vinyl.Play();
+    }
+
+    public void Stop_Ambiance_Vinyl()
+    {
+        if (ambiance_vinyl.isPlaying == true) ambiance_vinyl.Stop();
     }
 }
