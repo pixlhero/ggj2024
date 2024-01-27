@@ -82,5 +82,13 @@ public class Cassette : MonoBehaviour
             modelTransform
                 .DOLocalRotate(targetTransform.localRotation.eulerAngles, 0.2f)
         );
+
+        _localModelSequence.OnComplete(() => { 
+            if (targetTransform == normalModelTransform) {
+                AudioHandler.singleton.Play_Effect_DropCassette();
+            } else if (targetTransform == hoverModelTransform) {
+                AudioHandler.singleton.Play_Effect_LiftCassette();
+            }
+         });
     }
 }

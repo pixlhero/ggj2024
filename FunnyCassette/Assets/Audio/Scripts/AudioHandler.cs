@@ -105,6 +105,14 @@ public class AudioHandler : MonoBehaviour
 
     public void Play_Effect_DropCassette()
     {
+        effects_dropCassette.pitch = 1f;
+        effects_dropCassette.Play();
+    }
+
+    public void Play_Effect_LiftCassette()
+    {
+        // ToDo: Create different audio
+        effects_dropCassette.pitch = 2f;
         effects_dropCassette.Play();
     }
 
