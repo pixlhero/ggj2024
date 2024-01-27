@@ -140,7 +140,8 @@ MonoBehaviour:
   minPitch: 0.4
   maxPitch: 0.8
   frequencyLevel: 2
-  charWaitingTime: 0.1
+  charWaitingTime: 0.08
+  predictableSpeech: 0
 --- !u!1 &2098274487144707747
 GameObject:
   m_ObjectHideFlags: 0

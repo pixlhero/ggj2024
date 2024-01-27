@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class AudioHandler : MonoBehaviour
@@ -19,12 +20,45 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private AudioSource effects_childLaugh;
 
+    private AudioSource shared_source;
+    private AudioClip current_clip;
+    private List<AudioClip> all_clips = new List<AudioClip>();
+    public float minWaitBetweenPlays = 10f;
+    public float maxWaitBetweenPlays = 50f;
+    public float waitTimeCountdown = -1f;
+
     public static AudioHandler singleton;
 
     private void Awake()
     {
         singleton = this;
+        shared_source = this.gameObject.AddComponent<AudioSource>();
+
+        // Sorry no time LULZ
+        all_clips.Add(effects_knocking.clip);
+        all_clips.Add(effects_childLaugh.clip);
+        all_clips.Add(effects_heartbeat.clip);
     }
+
+    void Update()
+    {
+        // Randomly play audio effects while the game is running
+        if (!shared_source.isPlaying)
+        {
+            if (waitTimeCountdown < 0f)
+            {
+                current_clip = all_clips[Random.Range(0, all_clips.Count)];
+                shared_source.clip = current_clip;
+                shared_source.Play();
+                waitTimeCountdown = Random.Range(minWaitBetweenPlays, maxWaitBetweenPlays);
+            }
+            else
+            {
+                waitTimeCountdown -= Time.deltaTime;
+            }
+        }
+    }
+
 
     /*
         Effects when something happens

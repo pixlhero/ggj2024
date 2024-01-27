@@ -111,8 +111,5 @@ public class GameManager : MonoBehaviour
 
     private void InitializeAudio() {
         AudioHandler.singleton.Play_Ambiance_Drone();
-        StartCoroutine(AudioPlayerManager.singleton.PlayChildLaughRandomly());
-        StartCoroutine(AudioPlayerManager.singleton.PlayHeartbeatRandomly());
-        StartCoroutine(AudioPlayerManager.singleton.PlayKnockingRandomly());
     }
 }

@@ -9,7 +9,7 @@ public class TextPresenter : MonoBehaviour
     [SerializeField][Range(-3, 3)] private float minPitch = .5f;
     [SerializeField][Range(-3, 3)] private float maxPitch = 3;
     [SerializeField][Range(1, 5)] private int frequencyLevel = 1;
-    [SerializeField][Range(0.1f, 0.5f)] private float charWaitingTime = 0.1f;
+    [SerializeField][Range(0.01f, 0.5f)] private float charWaitingTime = 0.1f;
     [SerializeField] private bool predictableSpeech;
 
 
