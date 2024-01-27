@@ -61,11 +61,13 @@ public class Cassette : MonoBehaviour
     private void OnMouseEnter()
     {
         MoveModelToTransform(hoverModelTransform);
+        CursorController.singleton.Hover();
     }
 
     private void OnMouseExit()
     {
         MoveModelToTransform(normalModelTransform);
+        CursorController.singleton.Pointer();
     }
 
     private void MoveModelToTransform(Transform targetTransform)
