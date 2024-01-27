@@ -35,17 +35,18 @@ public class EnemyVisuals : MonoBehaviour
         _reactSequence?.Kill();
         _reactSequence = DOTween.Sequence();
         
-        _reactSequence.InsertCallback(2f,
-            () => { textPresenter.PresentText(text); });
+        _reactSequence.AppendCallback(() => { textPresenter.PresentText(text); });
+        _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(text));
         
         if (!isGood)
         {
-            _reactSequence.InsertCallback(3f, () => { GameManager.Singleton.RegisterFailure(); });
+            _reactSequence.AppendCallback(() => { GameManager.Singleton.RegisterFailure(); });
         }
-        
-        _reactSequence.InsertCallback(6f, () => { textPresenter.PresentText("Ok, next joke."); });
 
-        _reactSequence.AppendInterval(1f);
+        var okNextText = "Ok, next question.";
+        
+        _reactSequence.AppendCallback(() => { textPresenter.PresentText(okNextText); });
+        _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(okNextText));
         
         _reactSequence.OnComplete(() => { GameManager.Singleton.EnemyReactionFinished(); });
     }

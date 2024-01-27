@@ -9,6 +9,7 @@ public class TextPresenter : MonoBehaviour
     [SerializeField][Range(-3, 3)] private float minPitch = .5f;
     [SerializeField][Range(-3, 3)] private float maxPitch = 3;
     [SerializeField][Range(1, 5)] private int frequencyLevel = 1;
+    [SerializeField][Range(0.1f, 0.5f)] private float charWaitingTime = 0.1f;
 
 
     private AudioSource audioSource;
@@ -18,6 +19,18 @@ public class TextPresenter : MonoBehaviour
     {
         audioSource = this.gameObject.AddComponent<AudioSource>();
         audioSource.volume = .2f;
+    }
+
+    public float CalculateSpeechTime(string text) {
+        var buffer = 2;
+
+        Debug.Log("--- CALCULATE DIN MUETTER DU FICKER ---");
+        Debug.Log(text);
+        Debug.Log(text.Length);
+        Debug.Log(buffer);
+        Debug.Log("--- FERTIG ---");
+
+        return charWaitingTime * text.Length + buffer;
     }
 
     public void PresentText(string text)
@@ -40,7 +53,7 @@ public class TextPresenter : MonoBehaviour
 
             shownText.maxVisibleCharacters++;
 
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(charWaitingTime);
         }
     }
 
