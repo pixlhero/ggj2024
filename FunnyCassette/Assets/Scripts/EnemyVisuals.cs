@@ -1,3 +1,4 @@
+using Cinemachine;
 using DG.Tweening;
 using UnityEngine;
 
@@ -15,6 +16,8 @@ public class EnemyVisuals : MonoBehaviour
     {
         GameManager.EnemyTalksStarted += OnEnemeyTalksState;
         GameManager.EnemyReactionStarted += OnReact;
+
+        
     }
 
     private void OnEnemeyTalksState(DialogPhrase newPhrase)

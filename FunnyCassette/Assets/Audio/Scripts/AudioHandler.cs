@@ -22,7 +22,7 @@ public class AudioHandler : MonoBehaviour
 
     private AudioSource shared_source;
     private AudioClip current_clip;
-    private List<AudioClip> all_clips = new List<AudioClip>();
+    private List<AudioSource> all_sources = new List<AudioSource>();
     public float minWaitBetweenPlays = 10f;
     public float maxWaitBetweenPlays = 50f;
     public float waitTimeCountdown = -1f;
@@ -35,9 +35,9 @@ public class AudioHandler : MonoBehaviour
         shared_source = this.gameObject.AddComponent<AudioSource>();
 
         // Sorry no time LULZ
-        all_clips.Add(effects_knocking.clip);
-        all_clips.Add(effects_childLaugh.clip);
-        all_clips.Add(effects_heartbeat.clip);
+        all_sources.Add(effects_knocking);
+        all_sources.Add(effects_childLaugh);
+        all_sources.Add(effects_heartbeat);
     }
 
     void Update()
@@ -47,8 +47,7 @@ public class AudioHandler : MonoBehaviour
         {
             if (waitTimeCountdown < 0f)
             {
-                current_clip = all_clips[Random.Range(0, all_clips.Count)];
-                shared_source.clip = current_clip;
+                shared_source = all_sources[Random.Range(0, all_sources.Count)];
                 shared_source.Play();
                 waitTimeCountdown = Random.Range(minWaitBetweenPlays, maxWaitBetweenPlays);
             }

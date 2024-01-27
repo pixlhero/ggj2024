@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using Cinemachine;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -42,6 +43,8 @@ public class GameManager : MonoBehaviour
         Ending_Good,
         Ending_Bad
     }
+    
+    [SerializeField] private CinemachineImpulseSource cinemachineImpulseSource;
 
     void Awake()
     {
@@ -77,7 +80,10 @@ public class GameManager : MonoBehaviour
     public void RegisterFailure()
     {
         AudioHandler.singleton.Play_Effect_VeryBad();
+        cinemachineImpulseSource.GenerateImpulse();
+
         PlayerLives--;
+        
         if (PlayerLives <= 0)
         {
             Debug.Log("Bad Ending");

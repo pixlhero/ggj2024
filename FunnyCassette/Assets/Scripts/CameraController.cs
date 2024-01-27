@@ -1,14 +1,15 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private float mouseInfluence;
     [SerializeField] private CinemachineVirtualCamera mainVirtualCamera;
-    
     private Quaternion _initialCameraRotation;
 
     private void Awake()
