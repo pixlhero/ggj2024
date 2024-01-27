@@ -8,6 +8,10 @@ public class DialogPhrase
     public List<string> text;
 
     public List<string> correctOptions;
+
+    public string goodReaction;
+
+    public string badReaction;
     
     public bool IsCorrectOption(Cassette.CassetteType option)
     {

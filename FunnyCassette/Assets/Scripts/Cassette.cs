@@ -16,15 +16,27 @@ public class Cassette : MonoBehaviour
     [SerializeField] private Transform normalModelTransform;
 
     private Sequence _localModelSequence;
+
+    private Collider _collider;
     
     public CassetteType Type { get; private set; }
 
     public Sequence Sequence;
 
+    private void Awake()
+    {
+        _collider = GetComponent<Collider>();
+    }
+
     private void Start()
     {
         modelTransform.localPosition = normalModelTransform.localPosition;
         modelTransform.localRotation = normalModelTransform.localRotation;
+    }
+
+    private void Update()
+    {
+        _collider.enabled = GameManager.Singleton.State == GameManager.GameState.PlayerTurn;
     }
 
     private void OnMouseDown()

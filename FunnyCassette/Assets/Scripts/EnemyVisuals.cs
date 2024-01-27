@@ -33,10 +33,16 @@ public class EnemyVisuals : MonoBehaviour
         shownText.text = "";
         _reactSequence?.Kill();
         _reactSequence = DOTween.Sequence();
+        
         _reactSequence.InsertCallback(2f,
             () => { shownText.text = text; });
-        _reactSequence.InsertCallback(3f, () => { GameManager.Singleton.RegisterFailure(); });
-        _reactSequence.SetDelay(2f);
+        
+        _reactSequence.InsertCallback(4f, () => { GameManager.Singleton.RegisterFailure(); });
+        
+        _reactSequence.InsertCallback(6f, () => { shownText.text = "Ok, next joke."; });
+
+        _reactSequence.AppendInterval(1f);
+        
         _reactSequence.OnComplete(() => { GameManager.Singleton.EnemyReactionFinished(); });
     }
 }

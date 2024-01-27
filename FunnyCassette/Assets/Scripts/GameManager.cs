@@ -70,7 +70,8 @@ public class GameManager : MonoBehaviour
     {
         var correct = CurrentDialogPhrase.IsCorrectOption(type);
         State = GameState.EnemyReaction;
-        EnemyReactionStarted?.Invoke(correct, "reaction text goes here");
+        var reactionText = correct ? CurrentDialogPhrase.goodReaction : CurrentDialogPhrase.badReaction;
+        EnemyReactionStarted?.Invoke(correct, reactionText);
     }
 
     public void RegisterFailure()

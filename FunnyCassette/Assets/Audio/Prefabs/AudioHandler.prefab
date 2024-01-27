@@ -394,6 +394,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3460660629069038380}
   - component: {fileID: 2799870572822652663}
+  - component: {fileID: 3184525410948541795}
   m_Layer: 0
   m_Name: AudioHandler
   m_TagString: Untagged
@@ -436,6 +437,18 @@ MonoBehaviour:
   effects_knocking: {fileID: 6919827363499122195}
   effects_heartbeat: {fileID: 2067489068588184945}
   effects_veryBad: {fileID: 6398316503650866760}
+--- !u!114 &3184525410948541795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3487402956739062740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5061a0388b43a40d4a9ba52a8fae339f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3572481495833458929
 GameObject:
   m_ObjectHideFlags: 0

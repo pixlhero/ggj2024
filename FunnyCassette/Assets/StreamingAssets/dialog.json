@@ -10,8 +10,8 @@
               "haha",
               "dotdotdot"
           ],
-          "goodReaction": "Oh yes, you like my joike",
-          "badReaction": "Oh, you just act babab"
+          "goodReaction": "Oh yes, you like my joke",
+          "badReaction": "Oh, you just act like you like my joke"
       },
       {
           "text": [
@@ -22,7 +22,9 @@
               "LOL",
               "haha",
               "dotdotdot"
-          ]
+          ],
+          "goodReaction": "Oh yes, you like my joke",
+          "badReaction": "Oh, you just act like you like my joke"
       },
       {
           "text": [
@@ -30,7 +32,9 @@
           ],
           "correctOptions": [
               "dotdotdot"
-          ]
+          ],
+          "goodReaction": "Oh yes, you like my joke",
+          "badReaction": "Oh, you just act like you like my joke"
       },
       {
           "text": [
