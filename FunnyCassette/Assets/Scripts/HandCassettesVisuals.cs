@@ -28,7 +28,7 @@ public class HandCassettesVisuals : MonoBehaviour
         var sequence = DOTween.Sequence();
         sequence.Insert(0,
             newCassette.transform
-                .DOLocalJump(newLocalPos, 0.2f, 1, 0.5f)
+                .DOLocalJump(newLocalPos, 0.1f, 1, 0.5f)
         );
         sequence.Insert(0,
             newCassette.transform
@@ -60,12 +60,12 @@ public class HandCassettesVisuals : MonoBehaviour
             
             var localTargetPos = GetLocalPosition(newCassette);
             
-            var sequence = DOTween.Sequence();
-            sequence.Insert(0,
+            newCassette.Sequence = DOTween.Sequence();
+            newCassette.Sequence.Insert(0,
                 newCassette.transform
-                    .DOLocalJump(localTargetPos, 0.2f, 1, 0.5f)
+                    .DOLocalJump(localTargetPos, 0.1f, 1, 0.5f)
             );
-            sequence.Insert(0,
+            newCassette.Sequence.Insert(0,
                 newCassette.transform
                     .DORotate(Vector3.zero, 0.5f)
             );
@@ -80,7 +80,7 @@ public class HandCassettesVisuals : MonoBehaviour
         cassette.Sequence = DOTween.Sequence();
         cassette.Sequence.Insert(0,
             cassette.transform
-                .DOJump(playingDestinationTransform.position, 0.2f, 1, 0.5f)
+                .DOJump(playingDestinationTransform.position, 0.1f, 1, 0.5f)
         );
         cassette.Sequence.Insert(0,
             cassette.transform

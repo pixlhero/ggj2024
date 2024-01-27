@@ -30,12 +30,11 @@ public class HandCassettesState : MonoBehaviour
                 var newCassette = Deck.Singleton.DrawNewCassette();
                 Cassettes.Add(newCassette);
             }
+            CassetteAddedList?.Invoke(Cassettes);
         }
-        
-        CassetteAddedList?.Invoke(Cassettes);
     }
     
-    public void OnRoundNumberChanged(int roundNumber)
+    private void OnRoundNumberChanged(int roundNumber)
     {
         if (roundNumber == 0)
             return; // don't add any cards in the first round
