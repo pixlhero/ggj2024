@@ -1,3 +1,5 @@
+using System;
+using UnityEditor.Rendering;
 using UnityEngine;
 
 public class CassetteLabel: MonoBehaviour
@@ -5,5 +7,17 @@ public class CassetteLabel: MonoBehaviour
     public Cassette.CassetteType type;
     public string text;
     public Material material;
-    // TODO audio source
+    
+    private AudioSource _audioSource;
+
+    private void Awake()
+    {
+        _audioSource = GetComponent<AudioSource>();
+    }
+
+    public void Play()
+    {
+        Debug.Log($"playing {gameObject.name}");
+        _audioSource.Play();
+    }
 }

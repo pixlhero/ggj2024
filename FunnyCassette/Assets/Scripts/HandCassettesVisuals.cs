@@ -8,28 +8,28 @@ public class HandCassettesVisuals : MonoBehaviour
     [SerializeField] private float cassettesDistance;
 
     [SerializeField] private Transform playingDestinationTransform;
-    
+
     [SerializeField] private Transform drawingOriginTransform;
-    
+
     private Cassette _lastPlayedCassette;
-    
+
     private void Awake()
     {
         HandCassettesState.CassetteAdded += OnCassetteAdded;
         HandCassettesState.CassetteAddedList += OnCassetteAddedList;
         HandCassettesState.CassetteRemoved += OnCassetteRemoved;
     }
-    
+
     private void OnCassetteAdded(Cassette newCassette)
     {
         if (_lastPlayedCassette != null)
             Destroy(_lastPlayedCassette.gameObject);
-        
+
         newCassette.transform.SetParent(transform);
         newCassette.transform.position = drawingOriginTransform.position;
         newCassette.transform.rotation = drawingOriginTransform.rotation;
         var newLocalPos = GetLocalPosition(newCassette);
-        
+
         var sequence = DOTween.Sequence();
         sequence.Insert(0,
             newCassette.transform
@@ -42,9 +42,9 @@ public class HandCassettesVisuals : MonoBehaviour
 
         foreach (var cassette in HandCassettesState.Singleton.Cassettes)
         {
-            if(cassette == newCassette)
+            if (cassette == newCassette)
                 continue;
-            
+
             var localTargetPos = GetLocalPosition(cassette);
             cassette.Sequence?.Kill();
             cassette.Sequence = DOTween.Sequence();
@@ -54,17 +54,17 @@ public class HandCassettesVisuals : MonoBehaviour
             );
         }
     }
-    
+
     private void OnCassetteAddedList(List<Cassette> newCassettes)
     {
-        foreach(var newCassette in newCassettes)
+        foreach (var newCassette in newCassettes)
         {
             newCassette.transform.SetParent(transform);
             newCassette.transform.position = drawingOriginTransform.position;
             newCassette.transform.rotation = drawingOriginTransform.rotation;
-            
+
             var localTargetPos = GetLocalPosition(newCassette);
-            
+
             newCassette.Sequence = DOTween.Sequence();
             newCassette.Sequence.Insert(0,
                 newCassette.transform
@@ -81,7 +81,7 @@ public class HandCassettesVisuals : MonoBehaviour
     {
         _lastPlayedCassette = cassette;
         cassette.transform.SetParent(null);
-        
+
         cassette.Sequence?.Kill();
         cassette.Sequence = DOTween.Sequence();
         cassette.Sequence.Insert(0,
@@ -92,6 +92,7 @@ public class HandCassettesVisuals : MonoBehaviour
             cassette.transform
                 .DORotate(playingDestinationTransform.rotation.eulerAngles, 0.3f)
         );
+        cassette.Sequence.InsertCallback(0.7f, () => { cassette.TypeData.Play(); });
 
         /*
         foreach (var remainingCassette in HandCassettesState.Singleton.Cassettes)
@@ -105,7 +106,6 @@ public class HandCassettesVisuals : MonoBehaviour
             );
         }
         */
-        
     }
 
     private Vector3 GetLocalPosition(Cassette cassette)
@@ -113,7 +113,7 @@ public class HandCassettesVisuals : MonoBehaviour
         var cassetteIndex = HandCassettesState.Singleton.Cassettes.IndexOf(cassette);
         var cassettesCount = HandCassettesState.Singleton.Cassettes.Count;
         var leftOffset = cassettesDistance * (cassettesCount - 1f) / 2f;
-        
+
         var targetPos = new Vector3(cassetteIndex * cassettesDistance - leftOffset, 0f, 0f);
         return targetPos;
     }
