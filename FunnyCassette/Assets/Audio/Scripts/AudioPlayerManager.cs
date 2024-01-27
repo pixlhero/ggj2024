@@ -13,7 +13,7 @@ public class AudioPlayerManager : MonoBehaviour
 
     public IEnumerator PlayChildLaughRandomly()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(25);
         Debug.Log("Now Playing ChildLaugh Sound");
         AudioHandler.singleton.Play_Effect_ChildLaugh();
     }
@@ -27,7 +27,7 @@ public class AudioPlayerManager : MonoBehaviour
 
     public IEnumerator PlayKnockingRandomly()
     {
-        yield return new WaitForSeconds(25);
+        yield return new WaitForSeconds(35);
         Debug.Log("Now Playing Knocking Sound");
         AudioHandler.singleton.Play_Effect_Knocking();
     }
