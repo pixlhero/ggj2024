@@ -13,6 +13,9 @@ public class TextPresenter : MonoBehaviour
     [SerializeField] private bool predictableSpeech;
 
 
+    private const string inbisibleTag = "<color=#0000>";
+
+    private string _shownText;
 
     private AudioSource audioSource;
     private Coroutine presentTextCoroutine;
@@ -30,24 +33,19 @@ public class TextPresenter : MonoBehaviour
 
     public void PresentText(string text)
     {
-        shownText.text = "";
-
-        presentTextCoroutine = StartCoroutine(PrintText(text));
+        _shownText = text;
+        presentTextCoroutine = StartCoroutine(PrintText());
     }
 
-    private IEnumerator PrintText(string text)
+    private IEnumerator PrintText()
     {
-        shownText.maxVisibleCharacters = 0;
-
-        foreach (char letter in text.ToCharArray())
+        for (var textIndex = 0; textIndex < _shownText.Length; textIndex++)
         {
-            shownText.text += letter;
-
-            PlayDialogSound(shownText.maxVisibleCharacters, letter);
-
-
-            shownText.maxVisibleCharacters++;
-
+            var text = _shownText.Substring(0, textIndex);
+            text += inbisibleTag;
+            text += _shownText.Substring(textIndex);
+            shownText.text = text;
+            PlayDialogSound(textIndex, _shownText[textIndex]);
             yield return new WaitForSeconds(charWaitingTime);
         }
     }

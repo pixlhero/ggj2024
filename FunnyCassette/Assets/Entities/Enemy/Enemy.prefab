@@ -177,7 +177,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 17.9}
-  m_SizeDelta: {x: 200, y: 27.13}
+  m_SizeDelta: {x: 130, y: 27.13}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6534644251207724747
 CanvasRenderer:
@@ -535,7 +535,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 423a5a46117bd46ccad48ab88209e66c, type: 2}
+      objectReference: {fileID: 2100000, guid: 5da372db4edd8412a8fdaf92f08be054, type: 2}
     - target: {fileID: 4257300502976558844, guid: ea48edcc6fd6840cfb348f8deb5defd8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -592,6 +592,11 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6810942226736188105, guid: ea48edcc6fd6840cfb348f8deb5defd8,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 423a5a46117bd46ccad48ab88209e66c, type: 2}
+    - target: {fileID: 7334834027740266240, guid: ea48edcc6fd6840cfb348f8deb5defd8,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
