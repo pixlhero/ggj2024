@@ -17,7 +17,7 @@ public class EnemyVisuals : MonoBehaviour
         GameManager.EnemyTalksStarted += OnEnemeyTalksState;
         GameManager.EnemyReactionStarted += OnReact;
 
-        
+        AnimationEvents.OnHitEvent += OnHitEvent;
     }
 
     private void OnEnemeyTalksState(DialogPhrase newPhrase)
@@ -51,11 +51,6 @@ public class EnemyVisuals : MonoBehaviour
             textPresenter.PresentText(text);
         });
         _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(text) + 2f);
-        
-        if (!isGood)
-        {
-            _reactSequence.AppendCallback(() => { GameManager.Singleton.RegisterFailure(); });
-        }
 
         var okNextText = "Anyway...";
         
@@ -70,5 +65,10 @@ public class EnemyVisuals : MonoBehaviour
         {
             GameManager.Singleton.EnemyReactionFinished();
         });
+    }
+
+    private void OnHitEvent()
+    {
+        GameManager.Singleton.RegisterFailure();
     }
 }
