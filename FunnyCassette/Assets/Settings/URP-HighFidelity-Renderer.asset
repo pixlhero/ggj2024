@@ -19,7 +19,7 @@ MonoBehaviour:
     AfterOpaque: 0
     Source: 1
     NormalSamples: 1
-    Intensity: 0.5
+    Intensity: 0.52
     DirectLightingStrength: 0.25
     Radius: 0.25
     Samples: 0
@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Name: FullScreenPassRendererFeature
   m_EditorClassIdentifier: 
   m_Active: 1
-  injectionPoint: 450
+  injectionPoint: 550
   fetchColorBuffer: 1
-  requirements: 6
+  requirements: 4
   passMaterial: {fileID: 2100000, guid: ec07780b3d1ce449f96f810f78f99bd9, type: 2}
   passIndex: 0
   bindDepthStencilAttachment: 0
