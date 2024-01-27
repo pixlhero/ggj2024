@@ -40,21 +40,32 @@ public class EnemyVisuals : MonoBehaviour
         
         _reactSequence?.Kill();
         _reactSequence = DOTween.Sequence();
+        _reactSequence.AppendInterval(2f); // suspense
         
-        _reactSequence.AppendCallback(() => { textPresenter.PresentText(text); });
-        _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(text));
+        _reactSequence.AppendCallback(() =>
+        {
+             _animator.SetBool("isUpset", !isGood);
+            textPresenter.PresentText(text);
+        });
+        _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(text) + 2f);
         
         if (!isGood)
         {
-             _animator.SetBool("isUpset", true);
             _reactSequence.AppendCallback(() => { GameManager.Singleton.RegisterFailure(); });
         }
 
-        var okNextText = "Ok, next question.";
+        var okNextText = "Anyway...";
         
-        _reactSequence.AppendCallback(() => { textPresenter.PresentText(okNextText); });
-        _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(okNextText));
+        _reactSequence.AppendCallback(() =>
+        {
+             _animator.SetBool("isUpset", false);
+            textPresenter.PresentText(okNextText);
+        });
+        _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(okNextText) + 2f);
         
-        _reactSequence.OnComplete(() => { GameManager.Singleton.EnemyReactionFinished(); });
+        _reactSequence.OnComplete(() =>
+        {
+            GameManager.Singleton.EnemyReactionFinished();
+        });
     }
 }

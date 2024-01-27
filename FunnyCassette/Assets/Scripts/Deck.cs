@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using UnityEngine;
 
 public class Deck : MonoBehaviour
@@ -19,6 +20,8 @@ public class Deck : MonoBehaviour
 
     public Cassette DrawNewCassette()
     {
+        transform.DOShakeRotation(0.3f, new Vector3(0, 10, 0), 20, 90F, false);
+        
         var type = GetRandomCassetteType();
         var newCassette = InstantiatePrefab(type);
         return newCassette;

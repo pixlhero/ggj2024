@@ -25,9 +25,7 @@ public class TextPresenter : MonoBehaviour
 
     public float CalculateSpeechTime(string text)
     {
-        var buffer = 2;
-
-        return charWaitingTime * text.Length + buffer;
+        return charWaitingTime * text.Length;
     }
 
     public void PresentText(string text)
