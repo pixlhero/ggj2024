@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     
     public int TotalRoundsPlayed { get; private set; } = 0;
 
-    public int PlayerLives { get; private set; } = 1;
+    public int PlayerLives { get; private set; } = 3;
 
     public static GameManager Singleton;
 
@@ -101,7 +101,7 @@ public class GameManager : MonoBehaviour
         else
         {
             State = GameState.EnemyReaction;
-            var reactionText = correct ? CurrentDialogPhrase.goodReaction : CurrentDialogPhrase.badReaction;
+            var reactionText = CurrentDialogPhrase.GetReaction(cassette.Type);
             EnemyReactionStarted?.Invoke(correct, reactionText, CurrentDialogPhrase.next);
         }
     }
