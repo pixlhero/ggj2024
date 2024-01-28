@@ -8,6 +8,11 @@ public class PlayerLives : MonoBehaviour
     {
         GameManager.LivesChanged += OnGameLivesChanged;
     }
+    
+    private void OnDestroy()
+    {
+        GameManager.LivesChanged -= OnGameLivesChanged;
+    }
 
     private void OnGameLivesChanged(int lives)
     {

@@ -59,6 +59,17 @@ public class GameManager : MonoBehaviour
     {
         InitializeAudio();
 
+        State = GameState.Starting;
+        /*
+        OnRoundNumberChanged?.Invoke(RoundNumber);
+        EnemyTalksStarted?.Invoke(CurrentDialogPhrase);
+        */
+        
+        StartingStarted?.Invoke();
+    }
+
+    public void StartGame()
+    {
         State = GameState.EnemyTalks;
         OnRoundNumberChanged?.Invoke(RoundNumber);
         EnemyTalksStarted?.Invoke(CurrentDialogPhrase);
@@ -70,9 +81,15 @@ public class GameManager : MonoBehaviour
         PlayerTurnStarted?.Invoke();
     }
 
-    public void RegisterCassetteChoice(Cassette.CassetteType type)
+    public void RegisterCassetteChoice(Cassette cassette)
     {
-        var correct = CurrentDialogPhrase.IsCorrectOption(type);
+        if (State == GameState.Starting)
+        {
+            IntroController.Singleton.ChoseCassette(cassette);
+            return;
+        }
+        
+        var correct = CurrentDialogPhrase.IsCorrectOption(cassette.Type);
         State = GameState.EnemyReaction;
         var reactionText = correct ? CurrentDialogPhrase.goodReaction : CurrentDialogPhrase.badReaction;
         EnemyReactionStarted?.Invoke(correct, reactionText, CurrentDialogPhrase.next);

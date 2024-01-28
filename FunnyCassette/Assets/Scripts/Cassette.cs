@@ -10,6 +10,11 @@ public class Cassette : MonoBehaviour
         DotDotDot,
         Haha,
         OhNo,
+
+        // intro cassettes:
+        Play,
+        Quit,
+        Credits,
     }
 
     [SerializeField] private Transform modelTransform;
@@ -23,11 +28,11 @@ public class Cassette : MonoBehaviour
     private Sequence _localModelSequence;
 
     private Collider _collider;
-    
-    public CassetteLabel TypeData{ get; private set;}
+
+    public CassetteLabel TypeData { get; private set; }
 
     public CassetteType Type => TypeData.type;
-    
+
     public Sequence Sequence;
 
     private TextPresenter _textPresenter;
@@ -43,20 +48,27 @@ public class Cassette : MonoBehaviour
     private void Start()
     {
         _initialLocalRotation = normalModelTransform.localRotation;
-        
+
         var randomYRot = UnityEngine.Random.Range(-20f, 20f);
         normalModelTransform.localRotation *= Quaternion.Euler(0, randomYRot, 0);
-        
+
         modelTransform.localPosition = normalModelTransform.localPosition;
         modelTransform.localRotation = normalModelTransform.localRotation;
     }
 
+    public bool CanClick()
+    {
+        return (GameManager.Singleton.State == GameManager.GameState.PlayerTurn ||
+                GameManager.Singleton.State == GameManager.GameState.Starting &&
+                IntroController.Singleton.ChosenCassette == null) &&
+               !_textPresenter.IsReadingSomething;
+    }
+
     private void Update()
     {
-        _collider.enabled = GameManager.Singleton.State == GameManager.GameState.PlayerTurn &&
-                            !_textPresenter.IsReadingSomething;
+        _collider.enabled = CanClick();
     }
-    
+
     public void SetTypeData(CassetteLabel label)
     {
         TypeData = label;
@@ -99,12 +111,16 @@ public class Cassette : MonoBehaviour
                 .DOLocalRotate(targetTransform.localRotation.eulerAngles, 0.2f)
         );
 
-        _localModelSequence.OnComplete(() => { 
-            if (targetTransform == normalModelTransform) {
+        _localModelSequence.OnComplete(() =>
+        {
+            if (targetTransform == normalModelTransform)
+            {
                 AudioHandler.singleton.Play_Effect_DropCassette();
-            } else if (targetTransform == hoverModelTransform) {
+            }
+            else if (targetTransform == hoverModelTransform)
+            {
                 AudioHandler.singleton.Play_Effect_LiftCassette();
             }
-         });
+        });
     }
 }

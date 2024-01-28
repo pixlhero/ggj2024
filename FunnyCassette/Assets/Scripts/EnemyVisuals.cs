@@ -17,9 +17,26 @@ public class EnemyVisuals : MonoBehaviour
     {
         GameManager.EnemyTalksStarted += OnEnemeyTalksState;
         GameManager.EnemyReactionStarted += OnReact;
-        GameManager.LivesChanged += (lives) => { if(lives <= 0) _animator.SetBool("isMad", true); };
+        GameManager.LivesChanged += OnLivesChanged;
 
         AnimationEvents.OnHitEvent += OnHitEvent;
+    }
+    
+    private void OnDestroy()
+    {
+        GameManager.EnemyTalksStarted -= OnEnemeyTalksState;
+        GameManager.EnemyReactionStarted -= OnReact;
+        GameManager.LivesChanged -= OnLivesChanged;
+
+        AnimationEvents.OnHitEvent -= OnHitEvent;
+    }
+    
+    private void OnLivesChanged(int lives)
+    {
+        if (lives <= 0)
+        {
+            _animator.SetBool("isMad", true);
+        }
     }
 
     private void OnEnemeyTalksState(DialogPhrase newPhrase)
@@ -43,7 +60,7 @@ public class EnemyVisuals : MonoBehaviour
 
         _reactSequence?.Kill();
         _reactSequence = DOTween.Sequence();
-        _reactSequence.AppendInterval(2f); // suspense
+        _reactSequence.AppendInterval(3f); // suspense
 
         _reactSequence.AppendCallback(() =>
         {

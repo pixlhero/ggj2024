@@ -18,6 +18,15 @@ public class HandCassettesVisuals : MonoBehaviour
         HandCassettesState.CassetteAdded += OnCassetteAdded;
         HandCassettesState.CassetteAddedList += OnCassetteAddedList;
         HandCassettesState.CassetteRemoved += OnCassetteRemoved;
+        HandCassettesState.AllCassettesRemoved += OnAllCassettesRemoved;
+    }
+    
+    private void OnDestroy()
+    {
+        HandCassettesState.CassetteAdded -= OnCassetteAdded;
+        HandCassettesState.CassetteAddedList -= OnCassetteAddedList;
+        HandCassettesState.CassetteRemoved -= OnCassetteRemoved;
+        HandCassettesState.AllCassettesRemoved -= OnAllCassettesRemoved;
     }
 
     private void OnCassetteAdded(Cassette newCassette)
@@ -39,9 +48,7 @@ public class HandCassettesVisuals : MonoBehaviour
             newCassette.transform
                 .DORotate(Vector3.zero, 0.5f)
         );
-        sequence.OnComplete(() => {
-            AudioHandler.singleton.Play_Effect_DropCassette();
-        });
+        sequence.OnComplete(() => { AudioHandler.singleton.Play_Effect_DropCassette(); });
 
         foreach (var cassette in HandCassettesState.Singleton.Cassettes)
         {
@@ -87,7 +94,7 @@ public class HandCassettesVisuals : MonoBehaviour
 
         var cassettePlayer = FindObjectOfType<CassettePlayer>();
         cassettePlayer.PlayAnimation();
-        
+
         cassette.SetToStraightRotation();
 
         cassette.Sequence?.Kill();
@@ -103,7 +110,7 @@ public class HandCassettesVisuals : MonoBehaviour
             cassette.transform
                 .DORotate(playingDestinationTransform.rotation.eulerAngles, 0.3f)
         );
-        cassette.Sequence.InsertCallback(0.7f, () => { cassette.TypeData.Play(); });
+        cassette.Sequence.InsertCallback(1.2f, () => { cassette.TypeData.Play(); });
 
         // cassette.Sequence.OnComplete( () => { AudioHandler.singleton.Play_Effect_PutinCassette(); });
 
@@ -119,6 +126,15 @@ public class HandCassettesVisuals : MonoBehaviour
             );
         }
         */
+    }
+
+    private void OnAllCassettesRemoved(List<Cassette> allCassettes)
+    {
+        foreach (var cassette in allCassettes)
+        {
+            var targetPos = cassette.transform.position + new Vector3(1f, 0f, -1f);
+            cassette.transform.DOMove(targetPos, 1.3f).OnComplete(() => { Destroy(cassette.gameObject); });
+        }
     }
 
     private Vector3 GetLocalPosition(Cassette cassette)
