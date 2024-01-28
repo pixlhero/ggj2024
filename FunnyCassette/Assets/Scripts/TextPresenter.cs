@@ -21,6 +21,8 @@ public class TextPresenter : MonoBehaviour
 
     private AudioSource audioSource;
     private Coroutine presentTextCoroutine;
+    
+    public bool IsReadingSomething => presentTextCoroutine != null;
 
     private void Awake()
     {
@@ -92,6 +94,8 @@ public class TextPresenter : MonoBehaviour
 
             isFirstSentence = false;
         }
+        
+        presentTextCoroutine = null; // so that we stop talking
     }
 
     private void PlayDialogSound(int currentCharacterCount, char currentCharacter)
