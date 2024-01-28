@@ -196,6 +196,11 @@ PrefabInstance:
       propertyPath: _enemyAnimator
       value: 
       objectReference: {fileID: 1254616878}
+    - target: {fileID: 7250186747739514144, guid: f0675d3d3a0374e5c8e6b4afc7a5b1fb,
+        type: 3}
+      propertyPath: blackoutCanvasGroup
+      value: 
+      objectReference: {fileID: 1456115216}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -756,6 +761,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b321e0ab81fb423c9c30a0c7fe97184, type: 3}
+--- !u!225 &1456115216 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 6196720074056012873, guid: f5d80a2b87f9b48deb0e9ad7883c91f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 906487706}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1722974222
 PrefabInstance:
   m_ObjectHideFlags: 0

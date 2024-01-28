@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography;
+using DG.Tweening;
 using UnityEngine;
 
 public class IntroController : MonoBehaviour
@@ -17,6 +18,8 @@ public class IntroController : MonoBehaviour
     [SerializeField] private Animator _enemyAnimator;
 
     public static IntroController Singleton;
+
+    [SerializeField] private CanvasGroup blackoutCanvasGroup;
 
     public Cassette ChosenCassette { get; private set; }
 
@@ -38,6 +41,14 @@ public class IntroController : MonoBehaviour
 
     private IEnumerator StartIntro()
     {
+        textPresenter.PresentText("");
+        
+        blackoutCanvasGroup.alpha = 1f;
+
+        blackoutCanvasGroup.DOFade(0f, 2f);
+
+        yield return new WaitForSeconds(3f);
+        
         var introText = new List<string>()
         {
             "Hi there.",
