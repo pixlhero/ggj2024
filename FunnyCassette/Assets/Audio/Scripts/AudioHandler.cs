@@ -31,6 +31,15 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private AudioSource effects_dropCassette;
 
+    [SerializeField]
+    private AudioSource effects_button1;
+
+    [SerializeField]
+    private AudioSource effects_button2;
+
+    [SerializeField]
+    private AudioSource effects_button3;
+
     private AudioSource shared_source;
     private AudioClip current_clip;
     private List<AudioSource> all_sources = new List<AudioSource>();
@@ -114,6 +123,21 @@ public class AudioHandler : MonoBehaviour
         // ToDo: Create different audio
         effects_dropCassette.pitch = 2f;
         effects_dropCassette.Play();
+    }
+
+    public void Play_Effect_Button1()
+    {
+        effects_button1.Play();
+    }
+
+    public void Play_Effect_Button2()
+    {
+        effects_button2.Play();
+    }
+
+    public void Play_Effect_Button3()
+    {
+        effects_button3.Play();
     }
 
     /*
