@@ -40,6 +40,18 @@ public class AudioHandler : MonoBehaviour
     [SerializeField]
     private AudioSource effects_button3;
 
+    [SerializeField]
+    private AudioSource effects_player_startgame;
+
+    [SerializeField]
+    private AudioSource effects_player_credits;
+
+    [SerializeField]
+    private AudioSource effects_player_quitgame;
+
+    [SerializeField]
+    private AudioSource effects_player_hmm;
+
     private AudioSource shared_source;
     private AudioClip current_clip;
     private List<AudioSource> all_sources = new List<AudioSource>();
@@ -138,6 +150,26 @@ public class AudioHandler : MonoBehaviour
     public void Play_Effect_Button3()
     {
         effects_button3.Play();
+    }
+
+    public void Play_Effect_Player_StartGame()
+    {
+        effects_player_startgame.Play();
+    }
+
+    public void Play_Effect_Player_Credits()
+    {
+        effects_player_credits.Play();
+    }
+
+    public void Play_Effect_Player_QuitGame()
+    {
+        effects_player_quitgame.Play();
+    }
+
+     public void Play_Effect_Player_Hmm()
+    {
+        effects_player_hmm.Play();
     }
 
     /*
