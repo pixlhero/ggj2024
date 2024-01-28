@@ -1,0 +1,3 @@
+Jester's Judgment
+
+In "Jester's Judgment," you're trapped in a chilling game of humor and horror. Face a menacing figure who cracks jokes in a dimly lit room. Your only tools: a stack of cassettes, each labeled with different emotions. Choose your reactions wisely – laugh, cry or wait. But beware, the Jester is fickle. Delight him, and you earn his eerie smile. Displease him, and face his wrath, losing one of your precious lives. Can you survive the Jester's twisted sense of humor? Your fate lies in the emotion you play.
