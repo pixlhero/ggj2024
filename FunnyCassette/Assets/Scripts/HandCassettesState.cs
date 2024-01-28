@@ -29,7 +29,7 @@ public class HandCassettesState : MonoBehaviour
 
     private void OnPlayerTurn()
     {
-        if (GameManager.Singleton.RoundNumber == 0)
+        if (GameManager.Singleton.TotalRoundsPlayed == 0)
         {
             Cassettes = Deck.Singleton.GetStarterCassettes();
             CassetteAddedList?.Invoke(Cassettes);

@@ -25,6 +25,8 @@ public class GameManager : MonoBehaviour
 
     private int _maxRounds;
     public int RoundNumber { get; private set; } = 0;
+    
+    public int TotalRoundsPlayed { get; private set; } = 0;
 
     public int PlayerLives { get; private set; } = 3;
 
@@ -123,15 +125,13 @@ public class GameManager : MonoBehaviour
 
         // check if was last round
         if (State != GameState.Ending_Bad && RoundNumber + 1 >= _maxRounds)
-        {
-            Debug.Log("Good Ending");
-            State = GameState.Ending_Good;
-            EndingGoodStarted?.Invoke();
-            return;
-        }
+            RoundNumber = 0;
+        else
+            RoundNumber++;
+        
+        TotalRoundsPlayed++;
 
         State = GameState.EnemyTalks;
-        RoundNumber++;
         OnRoundNumberChanged?.Invoke(RoundNumber);
         EnemyTalksStarted?.Invoke(CurrentDialogPhrase);
     }
