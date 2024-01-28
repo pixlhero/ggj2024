@@ -27,12 +27,15 @@ public class Cassette : MonoBehaviour
     public CassetteLabel TypeData{ get; private set;}
 
     public CassetteType Type => TypeData.type;
-
+    
     public Sequence Sequence;
+
+    private TextPresenter _textPresenter;
 
     private void Awake()
     {
         _collider = GetComponent<Collider>();
+        _textPresenter = FindObjectOfType<TextPresenter>();
     }
 
     private void Start()
@@ -43,7 +46,8 @@ public class Cassette : MonoBehaviour
 
     private void Update()
     {
-        _collider.enabled = GameManager.Singleton.State == GameManager.GameState.PlayerTurn;
+        _collider.enabled = GameManager.Singleton.State == GameManager.GameState.PlayerTurn &&
+                            !_textPresenter.IsReadingSomething;
     }
     
     public void SetTypeData(CassetteLabel label)
