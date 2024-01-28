@@ -9,8 +9,8 @@
         "haha"
       ],
       "hahaReaction": "Glad you liked it!",
-      "dotdotdotReaction": "What, no laugh? Was it too out of this world for you?",
-      "ohnoReaction": "A joke about space and you're upset? Lighten up!"
+      "dotdotdotReaction": "What's this, silent treatment? It's a joke, not a space tragedy!",
+      "ohnoReaction": "Upset over a space joke? You've got to be kidding me!"
     },
     {
       "text": [
@@ -20,8 +20,8 @@
       "correctOptions": [
         "ohno"
       ],
-      "hahaReaction": "Oh, you find my fears funny? That's cold.",
-      "dotdotdotReaction": "Silent? My dreams are floating away here!",
+      "hahaReaction": "Laughing at my fears? That's just cruel!",
+      "dotdotdotReaction": "Ignoring my dreams? That's downright disrespectful!",
       "ohnoReaction": "Yeah, dreams can be funny."
     },
     {
@@ -33,8 +33,8 @@
         "haha"
       ],
       "hahaReaction": "Bears and jokes, a perfect match!",
-      "dotdotdotReaction": "Not even a chuckle? That's unbearable!",
-      "ohnoReaction": "Sad? It's a joke, not a wildlife documentary!"
+      "dotdotdotReaction": "Silence? You're unbearable!",
+      "ohnoReaction": "Sobbing over a bear joke? Grow a spine!"
     },
     {
       "text": [
@@ -44,8 +44,8 @@
       "correctOptions": [
         "ohno"
       ],
-      "hahaReaction": "Laughing at my misfortune? That's harsh!",
-      "dotdotdotReaction": "Ignoring my story? That's just rude.",
+      "hahaReaction": "My loss is your comedy? That's sick!",
+      "dotdotdotReaction": "Can't even acknowledge my pain? Heartless!",
       "ohnoReaction": "You understand, it's nice to connect."
     },
     {
@@ -57,8 +57,8 @@
         "haha"
       ],
       "hahaReaction": "A bit of dark humor!",
-      "dotdotdotReaction": "No reaction? What, did I tickle your funny bone too hard?",
-      "ohnoReaction": "Scared of a skeleton joke? It's humor, not horror!"
+      "dotdotdotReaction": "No reaction? Are you dead inside?",
+      "ohnoReaction": "Afraid of a skeleton joke? It's humor, not a curse!"
     },
     {
       "text": [
@@ -68,9 +68,9 @@
       "correctOptions": [
         "dotdotdot"
       ],
-      "hahaReaction": "Finding joy in my troubled past? You're twisted!",
+      "hahaReaction": "You find my misery amusing? That's twisted!",
       "dotdotdotReaction": "It's tough, but I've grown.",
-      "ohnoReaction": "Pity? I don't need your pity!"
+      "ohnoReaction": "Don't patronize me with your pity!"
     },
     {
       "text": [
@@ -81,8 +81,8 @@
         "haha"
       ],
       "hahaReaction": "Music to my ears!",
-      "dotdotdotReaction": "Speechless? It's a joke, not a riddle!",
-      "ohnoReaction": "It's a joke, not a tragedy! Cheer up!"
+      "dotdotdotReaction": "Too dense to get a simple joke?",
+      "ohnoReaction": "It's a light-hearted joke! Stop being so dramatic!"
     },
     {
       "text": [
@@ -92,8 +92,8 @@
       "correctOptions": [
         "ohno"
       ],
-      "hahaReaction": "Mocking my unfulfilled dreams? You're cruel!",
-      "dotdotdotReaction": "Too shocked to speak? It's just a sad tune.",
+      "hahaReaction": "Mocking my regret? You're just heartless!",
+      "dotdotdotReaction": "Ignoring my sorrow? That's cold!",
       "ohnoReaction": "It's a regret of mine."
     }
   ]
