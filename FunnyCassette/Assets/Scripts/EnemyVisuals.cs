@@ -17,6 +17,7 @@ public class EnemyVisuals : MonoBehaviour
     {
         GameManager.EnemyTalksStarted += OnEnemeyTalksState;
         GameManager.EnemyReactionStarted += OnReact;
+        GameManager.EndingBadStarted += () => { _animator.SetBool("isMad", true); };
 
         AnimationEvents.OnHitEvent += OnHitEvent;
     }
