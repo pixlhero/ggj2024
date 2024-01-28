@@ -2,50 +2,99 @@
   "dialogs": [
     {
       "text": [
-        "Why don't ghosts like rain?",
-        "Because it dampens their spirits!"
+        "Did you hear about the claustrophobic astronaut?",
+        "He just needed a little space."
       ],
       "correctOptions": [
         "haha"
       ],
-      "goodReaction": "Funny, right?",
-      "badReaction": "Why, don't you like my joke!?",
-      "next": "Anyway..."
+      "goodReaction": "Glad you liked it!",
+      "badReaction": "No sense of humor, huh?",
+      "next": "Speaking of space..."
     },
     {
       "text": [
-        "My dog died last week.",
-        "It was very sad..."
+        "I always wanted to be an astronaut,",
+        "But I was afraid of heights."
       ],
       "correctOptions": [
         "ohno"
       ],
-      "goodReaction": "Your sadness touches my heart",
-      "badReaction": "You don't care about my dog?!",
-      "next": "Anyway..."
+      "goodReaction": "Yeah, dreams can be funny.",
+      "badReaction": "You think it's funny? Dreams matter!",
+      "next": "Anyway, on to a lighter note..."
     },
     {
       "text": [
-        "This next one is gonna be great!",
-        "I hope you're ready for it!"
-      ],
-      "correctOptions": [
-        "dotdotdot"
-      ],
-      "goodReaction": "Ok, here it goes!",
-      "badReaction": "Hey, I haven't even told you my joke yet!",
-      "next": "Hehe"
-    },
-    {
-      "text": [
-        "A horse walks into a bar. The bartender looks up and says, 'Hey, why the long face?'"
+        "What do you call a bear with no teeth?",
+        "A gummy bear!"
       ],
       "correctOptions": [
         "haha"
       ],
-      "goodReaction": "A good one. Huh?",
-      "badReaction": "How dare you!",
-      "next": "Anyway..."
+      "goodReaction": "Bears and jokes, a perfect match!",
+      "badReaction": "That was a good one, you're tough to please!",
+      "next": "You know, I once had a pet bear..."
+    },
+    {
+      "text": [
+        "Just kidding. But I always wanted a pet.",
+        "Never could have one though."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "goodReaction": "You understand, it's nice to connect.",
+      "badReaction": "Too cold-hearted for pets, I see.",
+      "next": "Let's change the subject..."
+    },
+    {
+      "text": [
+        "Why don't skeletons fight each other?",
+        "They don't have the guts."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "goodReaction": "A bit of dark humor!",
+      "badReaction": "Not your taste, eh?",
+      "next": "Speaking of fighting..."
+    },
+    {
+      "text": [
+        "I used to get into a lot of fights as a kid.",
+        "I guess I had a lot of anger."
+      ],
+      "correctOptions": [
+        "dotdotdot"
+      ],
+      "goodReaction": "It's tough, but I've grown.",
+      "badReaction": "Judging me? That's harsh.",
+      "next": "Enough about the past."
+    },
+    {
+      "text": [
+        "I wrote a song about a tortilla.",
+        "Well, it’s more of a wrap."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "goodReaction": "Music to my ears!",
+      "badReaction": "Not a fan of wraps, I see.",
+      "next": "On a musical note..."
+    },
+    {
+      "text": [
+        "I always loved music,",
+        "But I never learned to play an instrument."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "goodReaction": "It's a regret of mine.",
+      "badReaction": "So, you don't care about music?",
+      "next": "Let's wrap this up..."
     }
   ]
 }
