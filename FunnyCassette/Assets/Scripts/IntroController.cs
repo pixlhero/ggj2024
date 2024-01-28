@@ -105,7 +105,7 @@ public class IntroController : MonoBehaviour
         switch (cassette.Type)
         {
             case Cassette.CassetteType.Quit:
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(2f);
                 
                 _enemyAnimator.SetBool("isUpset", true);
                 var textList = new List<string>() { "What?", "How dare you!" };
@@ -121,7 +121,7 @@ public class IntroController : MonoBehaviour
                 Application.Quit();
                 break;
             case Cassette.CassetteType.Credits:
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(2f);
                 _enemyAnimator.SetBool("isHappy", true);
 
                 var creditText1 = new List<string>() { "Ah.", "How nice that you're interested!" };
@@ -156,7 +156,7 @@ public class IntroController : MonoBehaviour
                 break;
             
             case Cassette.CassetteType.Play:
-                yield return new WaitForSeconds(1f);
+                yield return new WaitForSeconds(2f);
                 
                 HandCassettesState.Singleton.RemoveAllCassettes();
                 
