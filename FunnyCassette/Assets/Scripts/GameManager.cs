@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using Cinemachine;
 using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -86,21 +87,22 @@ public class GameManager : MonoBehaviour
 
         PlayerLives--;
 
+        LivesChanged?.Invoke(PlayerLives);
+
         if (PlayerLives <= 0)
         {
-            Debug.Log("Bad Ending");
             State = GameState.Ending_Bad;
-            EndingBadStarted?.Invoke();
-        }
-        else
-        {
-            LivesChanged?.Invoke(PlayerLives);
+            Debug.Log("Bad Ending");
         }
     }
 
     public void EnemyReactionFinished()
     {
         // go to next round
+        if(State == GameState.Ending_Bad){
+            EndingBadStarted?.Invoke();
+            return;}
+            
 
         // check if was last round
         if (State != GameState.Ending_Bad && RoundNumber + 1 >= _maxRounds)
@@ -121,5 +123,11 @@ public class GameManager : MonoBehaviour
     {
         AudioHandler.singleton.Play_Ambiance_Drone();
         AudioHandler.singleton.Play_Ambiance_Vinyl();
+    }
+
+    public static void Reset()
+    {
+        Scene scene = SceneManager.GetActiveScene();
+        SceneManager.LoadScene(scene.name);
     }
 }

@@ -17,7 +17,7 @@ public class EnemyVisuals : MonoBehaviour
     {
         GameManager.EnemyTalksStarted += OnEnemeyTalksState;
         GameManager.EnemyReactionStarted += OnReact;
-        GameManager.EndingBadStarted += () => { _animator.SetBool("isMad", true); };
+        GameManager.LivesChanged += (lives) => { if(lives <= 0) _animator.SetBool("isMad", true); };
 
         AnimationEvents.OnHitEvent += OnHitEvent;
     }
@@ -38,6 +38,9 @@ public class EnemyVisuals : MonoBehaviour
     {
         textPresenter.PresentText("");
 
+        if (_animator.GetBool("isMad"))
+            return;
+
         _reactSequence?.Kill();
         _reactSequence = DOTween.Sequence();
         _reactSequence.AppendInterval(2f); // suspense
@@ -46,6 +49,7 @@ public class EnemyVisuals : MonoBehaviour
         {
             _animator.SetBool("isHappy", isGood);
             _animator.SetBool("isUpset", !isGood);
+            if (_animator.GetBool("isMad")) return;
             textPresenter.PresentText(text);
         });
         _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(text) + 2f);
@@ -54,15 +58,13 @@ public class EnemyVisuals : MonoBehaviour
         {
             _animator.SetBool("isHappy", false);
             _animator.SetBool("isUpset", false);
+            if (_animator.GetBool("isMad")) return;
             textPresenter.PresentText(nextText);
         });
 
         _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(nextText) + 2f);
 
-        _reactSequence.OnComplete(() =>
-        {
-            GameManager.Singleton.EnemyReactionFinished();
-        });
+        _reactSequence.OnComplete(() => GameManager.Singleton.EnemyReactionFinished());
 
         _reactSequence.AppendCallback(() =>
         {
