@@ -51,9 +51,14 @@ public class Deck : MonoBehaviour
     
     private Cassette.CassetteType GetRandomCassetteType()
     {
-        var cassetteTypes = Enum.GetValues(typeof(Cassette.CassetteType));
-        var random = UnityEngine.Random.Range(0, cassetteTypes.Length);
-        return (Cassette.CassetteType) cassetteTypes.GetValue(random);
+        var randomTypeIndex = UnityEngine.Random.Range(0, 3);
+        var type = randomTypeIndex switch {
+            0 => Cassette.CassetteType.Haha,
+            1 => Cassette.CassetteType.OhNo,
+            2 => Cassette.CassetteType.DotDotDot,
+            _ => throw new ArgumentOutOfRangeException()
+        };
+        return type;
     }
     
     private CassetteLabel GetRandomTypeData(Cassette.CassetteType type)

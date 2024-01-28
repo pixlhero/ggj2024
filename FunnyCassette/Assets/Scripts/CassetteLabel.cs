@@ -17,6 +17,9 @@ public class CassetteLabel: MonoBehaviour
 
     public void Play()
     {
+        if(_audioSource == null)
+            return;
+        
         Debug.Log($"playing {gameObject.name}");
         _audioSource.Play();
     }

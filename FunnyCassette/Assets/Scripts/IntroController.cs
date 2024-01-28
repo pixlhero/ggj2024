@@ -7,6 +7,8 @@ using UnityEngine;
 
 public class IntroController : MonoBehaviour
 {
+    [SerializeField] private Light enemyLight;
+    
     [SerializeField] private CassetteLabel startingCassetteLabel;
     [SerializeField] private CassetteLabel creditsCassetteLabel;
     [SerializeField] private CassetteLabel quitCassetteLabel;
@@ -18,6 +20,9 @@ public class IntroController : MonoBehaviour
     [SerializeField] private Animator _enemyAnimator;
 
     public static IntroController Singleton;
+    
+    [SerializeField]
+    private EnemyVisuals enemyVisuals;
 
     [SerializeField] private CanvasGroup blackoutCanvasGroup;
 
@@ -41,6 +46,12 @@ public class IntroController : MonoBehaviour
 
     private IEnumerator StartIntro()
     {
+        var enemyLightIntensity = enemyLight.intensity;
+        enemyLight.intensity = 0f;
+        
+        var originalEnemyPosition = enemyVisuals.transform.position;
+        enemyVisuals.transform.position += new Vector3(0f, 0f, 2f);
+        
         textPresenter.PresentText("");
         
         blackoutCanvasGroup.alpha = 1f;
@@ -48,6 +59,10 @@ public class IntroController : MonoBehaviour
         blackoutCanvasGroup.DOFade(0f, 2f);
 
         yield return new WaitForSeconds(3f);
+
+        enemyLight.DOIntensity(enemyLightIntensity, 1f);
+        enemyVisuals.transform.DOMove(originalEnemyPosition, 1f);
+        yield return new WaitForSeconds(1.5f);
         
         var introText = new List<string>()
         {
