@@ -92,6 +92,9 @@ public class HandCassettesVisuals : MonoBehaviour
 
         cassette.Sequence?.Kill();
         cassette.Sequence = DOTween.Sequence();
+
+        cassette.Sequence.InsertCallback(0.2f, () => { AudioHandler.singleton.Play_Effect_PutinCassette(); });
+
         cassette.Sequence.Insert(0,
             cassette.transform
                 .DOJump(playingDestinationTransform.position, 0.25f, 1, 0.5f)
@@ -101,7 +104,8 @@ public class HandCassettesVisuals : MonoBehaviour
                 .DORotate(playingDestinationTransform.rotation.eulerAngles, 0.3f)
         );
         cassette.Sequence.InsertCallback(0.7f, () => { cassette.TypeData.Play(); });
-        cassette.Sequence.OnComplete(() => { AudioHandler.singleton.Play_Effect_PutinCassette(); });
+
+        // cassette.Sequence.OnComplete( () => { AudioHandler.singleton.Play_Effect_PutinCassette(); });
 
         /*
         foreach (var remainingCassette in HandCassettesState.Singleton.Cassettes)
