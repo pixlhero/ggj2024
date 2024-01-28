@@ -12,36 +12,37 @@ public class BadEnding : MonoBehaviour
     void Start()
     {
         GameManager.EndingBadStarted += () =>
-        {   
-            var endText = "You imbissle... You've ruined my mood... You've ruined everything!";
+        {
+            var endText = new List<string>(){
+                "You imbecile!",
+                "You ruin EVERYTHING!"
+            };
 
             textPresenter.PresentText(endText);
 
             var _reactSequence = DOTween.Sequence();
-            _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(endText) + 0f);
+            _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime("You imbissle! You ruin EVERYTHING!") + 0f);
 
             _reactSequence.OnComplete(() =>
             {
-
-            _animator.SetTrigger("tantrum");
+                _animator.SetTrigger("tantrum");
                 GameManager.Singleton.StartCoroutine(StartOutro());
             });
 
         };
     }
 
-        private IEnumerator StartOutro()
+    private IEnumerator StartOutro()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.5f);
         textPresenter.PresentText("");
-        
+
         blackoutCanvasGroup.alpha = 0f;
 
         blackoutCanvasGroup.DOFade(1f, 2f);
 
         yield return new WaitForSeconds(3f);
-        
-        
+
         GameManager.Reset();
     }
 
