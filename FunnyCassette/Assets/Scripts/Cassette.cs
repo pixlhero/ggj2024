@@ -32,6 +32,8 @@ public class Cassette : MonoBehaviour
 
     private TextPresenter _textPresenter;
 
+    private Quaternion _initialLocalRotation;
+
     private void Awake()
     {
         _collider = GetComponent<Collider>();
@@ -40,6 +42,8 @@ public class Cassette : MonoBehaviour
 
     private void Start()
     {
+        _initialLocalRotation = normalModelTransform.localRotation;
+        
         var randomYRot = UnityEngine.Random.Range(-20f, 20f);
         normalModelTransform.localRotation *= Quaternion.Euler(0, randomYRot, 0);
         
@@ -75,6 +79,11 @@ public class Cassette : MonoBehaviour
     {
         MoveModelToTransform(normalModelTransform);
         CursorController.singleton.Pointer();
+    }
+
+    public void SetToStraightRotation()
+    {
+        normalModelTransform.localRotation = _initialLocalRotation;
     }
 
     private void MoveModelToTransform(Transform targetTransform)

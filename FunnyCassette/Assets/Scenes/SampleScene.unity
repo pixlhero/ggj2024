@@ -875,7 +875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f26a1f73f0b43e5a9b1d72e6f803a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cassettesDistance: 0.13
+  cassettesDistance: 0.17
   playingDestinationTransform: {fileID: 1722974223}
   drawingOriginTransform: {fileID: 1360128459}
 --- !u!114 &2039475316
@@ -900,7 +900,7 @@ Transform:
   m_GameObject: {fileID: 2039475314}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.006, z: -0.14}
+  m_LocalPosition: {x: 0, y: 0.006, z: -0.167}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

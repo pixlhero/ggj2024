@@ -85,11 +85,16 @@ public class HandCassettesVisuals : MonoBehaviour
         _lastPlayedCassette = cassette;
         cassette.transform.SetParent(null);
 
+        var cassettePlayer = FindObjectOfType<CassettePlayer>();
+        cassettePlayer.PlayAnimation();
+        
+        cassette.SetToStraightRotation();
+
         cassette.Sequence?.Kill();
         cassette.Sequence = DOTween.Sequence();
         cassette.Sequence.Insert(0,
             cassette.transform
-                .DOJump(playingDestinationTransform.position, 0.1f, 1, 0.5f)
+                .DOJump(playingDestinationTransform.position, 0.25f, 1, 0.5f)
         );
         cassette.Sequence.Insert(0,
             cassette.transform
