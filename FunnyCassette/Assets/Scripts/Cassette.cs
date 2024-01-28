@@ -40,6 +40,9 @@ public class Cassette : MonoBehaviour
 
     private void Start()
     {
+        var randomYRot = UnityEngine.Random.Range(-20f, 20f);
+        normalModelTransform.localRotation *= Quaternion.Euler(0, randomYRot, 0);
+        
         modelTransform.localPosition = normalModelTransform.localPosition;
         modelTransform.localRotation = normalModelTransform.localRotation;
     }
