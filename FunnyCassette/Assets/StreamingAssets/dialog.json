@@ -103,6 +103,110 @@
       "dotdotdotReaction": "It's nice to find someone who listens.",
       "ohnoReaction": "Scared of a little graveyard talk? Pathetic!",
       "next": "Well, let's change the subject..."
+    },
+    {
+      "text": [
+        "Did you hear about the guy who invented Lifesavers?",
+        "He made a mint!"
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "hahaReaction": "Sweet! You get the humor!",
+      "dotdotdotReaction": "Not a fan of candy jokes? What, too sweet for you?!",
+      "ohnoReaction": "It's a joke, not a tragedy! Stop being so sour!",
+      "next": "On a more serious note..."
+    },
+    {
+      "text": [
+        "I once tried to start a candy business.",
+        "It never took off. Left a bitter taste in my mouth."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "hahaReaction": "Laughing at my failure? That's cold!",
+      "dotdotdotReaction": "Ignoring my misfortune? That's just heartless!",
+      "ohnoReaction": "Yeah, not all ventures are sweet.",
+      "next": "Changing gears..."
+    },
+    {
+      "text": [
+        "What do you get when you cross a snowman and a vampire?",
+        "Frostbite."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "hahaReaction": "A cold joke, but a good one!",
+      "dotdotdotReaction": "Too cold for you to handle? It's just a joke!",
+      "ohnoReaction": "Scared of a little chill? Toughen up!",
+      "next": "Speaking of the cold..."
+    },
+    {
+      "text": [
+        "Winter always gets me down.",
+        "Everything is so bleak and frozen."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "hahaReaction": "Finding my misery funny? You're ice-cold!",
+      "dotdotdotReaction": "Giving me the cold shoulder? That's harsh!",
+      "ohnoReaction": "Yeah, the cold can be harsh.",
+      "next": "But let's not dwell on the cold..."
+    },
+    {
+      "text": [
+        "I used to be a banker,",
+        "But I lost interest."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "hahaReaction": "Glad to see you appreciate finance humor!",
+      "dotdotdotReaction": "What's this, no reaction? Is my joke not worth your investment?!",
+      "ohnoReaction": "It's a play on words, not a financial crisis!",
+      "next": "Speaking of careers..."
+    },
+    {
+      "text": [
+        "My career never really went the way I planned.",
+        "Always felt like I was chasing something unattainable."
+      ],
+      "correctOptions": [
+        "dotdotdot"
+      ],
+      "hahaReaction": "You think my career struggles are funny? That's just rude!",
+      "dotdotdotReaction": "Thank you for listening. It means a lot.",
+      "ohnoReaction": "You pity me? I don't need your pity!",
+      "next": "Enough about me..."
+    },
+    {
+      "text": [
+        "Ever tried to eat a clock?",
+        "It's very time-consuming."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "hahaReaction": "A timely joke! Good to see you have a sense of humor!",
+      "dotdotdotReaction": "No reaction? Is my timing off, or is it just you?",
+      "ohnoReaction": "It's a joke, not a race against time! Lighten up!",
+      "next": "On the topic of time..."
+    },
+    {
+      "text": [
+        "I often think about how fleeting time is.",
+        "It's like we're just watching the seconds tick away."
+      ],
+      "correctOptions": [
+        "dotdotdot"
+      ],
+      "hahaReaction": "My existential dread is amusing to you?",
+      "dotdotdotReaction": "Thanks for taking a moment to reflect with me.",
+      "ohnoReaction": "You're worried about time too? Don't waste it worrying!",
+      "next": "Let's move on from such heavy thoughts..."
     }
   ]
 }
