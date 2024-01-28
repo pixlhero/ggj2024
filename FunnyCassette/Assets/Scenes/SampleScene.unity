@@ -967,6 +967,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textPresenter: {fileID: 1886371083}
   _animator: {fileID: 1254616878}
+  blackoutCanvasGroup: {fileID: 1456115216}
 --- !u!1 &2039475314
 GameObject:
   m_ObjectHideFlags: 0
