@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
     
     public int TotalRoundsPlayed { get; private set; } = 0;
 
-    public int PlayerLives { get; private set; } = 3;
+    public int PlayerLives { get; private set; } = 1;
 
     public static GameManager Singleton;
 
@@ -92,9 +92,25 @@ public class GameManager : MonoBehaviour
         }
         
         var correct = CurrentDialogPhrase.IsCorrectOption(cassette.Type);
-        State = GameState.EnemyReaction;
-        var reactionText = correct ? CurrentDialogPhrase.goodReaction : CurrentDialogPhrase.badReaction;
-        EnemyReactionStarted?.Invoke(correct, reactionText, CurrentDialogPhrase.next);
+
+        if (!correct && PlayerLives <= 1)
+        {
+            State = GameState.Ending_Bad;
+            EndingBadStarted?.Invoke();
+        }
+        else
+        {
+            State = GameState.EnemyReaction;
+            var reactionText = correct ? CurrentDialogPhrase.goodReaction : CurrentDialogPhrase.badReaction;
+            EnemyReactionStarted?.Invoke(correct, reactionText, CurrentDialogPhrase.next);
+        }
+    }
+
+    // used by ending
+    public void SetLivesToZero()
+    {
+        PlayerLives = 0;
+        LivesChanged?.Invoke(PlayerLives);
     }
 
     public void RegisterFailure()
@@ -107,21 +123,11 @@ public class GameManager : MonoBehaviour
         PlayerLives--;
 
         LivesChanged?.Invoke(PlayerLives);
-
-        if (PlayerLives <= 0)
-        {
-            State = GameState.Ending_Bad;
-            Debug.Log("Bad Ending");
-        }
     }
 
     public void EnemyReactionFinished()
     {
         // go to next round
-        if(State == GameState.Ending_Bad){
-            EndingBadStarted?.Invoke();
-            return;}
-            
 
         // check if was last round
         if (State != GameState.Ending_Bad && RoundNumber + 1 >= _maxRounds)

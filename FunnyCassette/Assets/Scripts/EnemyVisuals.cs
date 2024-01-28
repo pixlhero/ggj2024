@@ -9,15 +9,13 @@ public class EnemyVisuals : MonoBehaviour
 
     [SerializeField] private Animator _animator;
 
-    private const string invisibleTag = "<color=#0000>";
-
     private Sequence _reactSequence;
 
     private void Awake()
     {
         GameManager.EnemyTalksStarted += OnEnemeyTalksState;
         GameManager.EnemyReactionStarted += OnReact;
-        GameManager.LivesChanged += OnLivesChanged;
+        GameManager.EndingBadStarted += OnBadEndingStarted;
 
         AnimationEvents.OnHitEvent += OnHitEvent;
     }
@@ -26,17 +24,14 @@ public class EnemyVisuals : MonoBehaviour
     {
         GameManager.EnemyTalksStarted -= OnEnemeyTalksState;
         GameManager.EnemyReactionStarted -= OnReact;
-        GameManager.LivesChanged -= OnLivesChanged;
+        GameManager.EndingBadStarted -= OnBadEndingStarted;
 
         AnimationEvents.OnHitEvent -= OnHitEvent;
     }
     
-    private void OnLivesChanged(int lives)
+    private void OnBadEndingStarted()
     {
-        if (lives <= 0)
-        {
-            _animator.SetBool("isMad", true);
-        }
+        _reactSequence?.Kill();
     }
 
     private void OnEnemeyTalksState(DialogPhrase newPhrase)
@@ -55,9 +50,6 @@ public class EnemyVisuals : MonoBehaviour
     {
         textPresenter.PresentText("");
 
-        if (_animator.GetBool("isMad"))
-            return;
-
         _reactSequence?.Kill();
         _reactSequence = DOTween.Sequence();
         _reactSequence.AppendInterval(3f); // suspense
@@ -66,7 +58,6 @@ public class EnemyVisuals : MonoBehaviour
         {
             _animator.SetBool("isHappy", isGood);
             _animator.SetBool("isUpset", !isGood);
-            if (_animator.GetBool("isMad")) return;
             textPresenter.PresentText(text);
         });
         _reactSequence.AppendInterval(textPresenter.CalculateSpeechTime(text) + 2f);
@@ -75,7 +66,6 @@ public class EnemyVisuals : MonoBehaviour
         {
             _animator.SetBool("isHappy", false);
             _animator.SetBool("isUpset", false);
-            if (_animator.GetBool("isMad")) return;
             textPresenter.PresentText(nextText);
         });
 
