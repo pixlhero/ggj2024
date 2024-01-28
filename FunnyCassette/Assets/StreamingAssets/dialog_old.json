@@ -1,0 +1,100 @@
+{
+  "dialogs": [
+    {
+      "text": [
+        "Why did the scarecrow win an award?",
+        "Because he was outstanding in his field!"
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "goodReaction": "Ah, you appreciate the darker side of humor.",
+      "badReaction": "Not a fan of scarecrows, I take it?",
+      "next": "Speaking of fields..."
+    },
+    {
+      "text": [
+        "I once got lost in a cornfield at night.",
+        "It was eerily quiet."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "goodReaction": "Yes, the silence can be unsettling.",
+      "badReaction": "You're braver than I thought.",
+      "next": "On a lighter note..."
+    },
+    {
+      "text": [
+        "I have a joke about construction,",
+        "But I'm still working on it."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "goodReaction": "Building up to a good laugh, I see!",
+      "badReaction": "Too subtle for your taste?",
+      "next": "Construction reminds me..."
+    },
+    {
+      "text": [
+        "I used to build things, you know.",
+        "But my creations were always misunderstood."
+      ],
+      "correctOptions": [
+        "dotdotdot"
+      ],
+      "goodReaction": "A listener, good. Sometimes that's all we need.",
+      "badReaction": "Not everyone appreciates the craft, I suppose.",
+      "next": "Let's shift gears..."
+    },
+    {
+      "text": [
+        "What do you call a fish wearing a crown?",
+        "A kingfish!"
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "goodReaction": "Royalty and humor, a splendid mix!",
+      "badReaction": "No love for marine monarchy?",
+      "next": "Speaking of the sea..."
+    },
+    {
+      "text": [
+        "I always found the ocean terrifying.",
+        "The vast, endless depths."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "goodReaction": "Ah, you sense the dread too.",
+      "badReaction": "Braver than most, I see.",
+      "next": "But enough about depths."
+    },
+    {
+      "text": [
+        "I'd tell you a cemetery joke,",
+        "But you've probably heard it. It's dead popular."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "goodReaction": "Enjoy the grave humor, do you?",
+      "badReaction": "Too grim?",
+      "next": "Speaking of which..."
+    },
+    {
+      "text": [
+        "I often wander through graveyards.",
+        "There's a strange comfort among the tombstones."
+      ],
+      "correctOptions": [
+        "dotdotdot"
+      ],
+      "goodReaction": "It's nice to find someone who listens.",
+      "badReaction": "Too morbid a topic for you?",
+      "next": "Well, let's change the subject..."
+    }
+  ]
+}

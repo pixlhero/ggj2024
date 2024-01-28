@@ -2,99 +2,107 @@
   "dialogs": [
     {
       "text": [
-        "Why did the scarecrow win an award?",
-        "Because he was outstanding in his field!"
+        "Did you hear about the claustrophobic astronaut?",
+        "He just needed a little space."
       ],
       "correctOptions": [
         "haha"
       ],
-      "goodReaction": "Ah, you appreciate the darker side of humor.",
-      "badReaction": "Not a fan of scarecrows, I take it?",
-      "next": "Speaking of fields..."
+      "hahaReaction": "Glad you liked it!",
+      "dotdotdotReaction": "What's this, silent treatment? It's a joke, not a space tragedy!",
+      "ohnoReaction": "Upset over a space joke? You've got to be kidding me!",
+      "next": "Speaking of space..."
     },
     {
       "text": [
-        "I once got lost in a cornfield at night.",
-        "It was eerily quiet."
+        "I always wanted to be an astronaut,",
+        "But I was afraid of heights."
       ],
       "correctOptions": [
         "ohno"
       ],
-      "goodReaction": "Yes, the silence can be unsettling.",
-      "badReaction": "You're braver than I thought.",
-      "next": "On a lighter note..."
+      "hahaReaction": "Laughing at my fears? That's just cruel!",
+      "dotdotdotReaction": "Ignoring my dreams? That's downright disrespectful!",
+      "ohnoReaction": "Yeah, dreams can be funny.",
+      "next": "Anyway, on to a lighter note..."
     },
     {
       "text": [
-        "I have a joke about construction,",
-        "But I'm still working on it."
+        "What do you call a bear with no teeth?",
+        "A gummy bear!"
       ],
       "correctOptions": [
         "haha"
       ],
-      "goodReaction": "Building up to a good laugh, I see!",
-      "badReaction": "Too subtle for your taste?",
-      "next": "Construction reminds me..."
+      "hahaReaction": "Bears and jokes, a perfect match!",
+      "dotdotdotReaction": "Silence? You're unbearable!",
+      "ohnoReaction": "Sobbing over a bear joke? Grow a spine!",
+      "next": "You know, I once had a pet bear..."
     },
     {
       "text": [
-        "I used to build things, you know.",
-        "But my creations were always misunderstood."
-      ],
-      "correctOptions": [
-        "dotdotdot"
-      ],
-      "goodReaction": "A listener, good. Sometimes that's all we need.",
-      "badReaction": "Not everyone appreciates the craft, I suppose.",
-      "next": "Let's shift gears..."
-    },
-    {
-      "text": [
-        "What do you call a fish wearing a crown?",
-        "A kingfish!"
-      ],
-      "correctOptions": [
-        "haha"
-      ],
-      "goodReaction": "Royalty and humor, a splendid mix!",
-      "badReaction": "No love for marine monarchy?",
-      "next": "Speaking of the sea..."
-    },
-    {
-      "text": [
-        "I always found the ocean terrifying.",
-        "The vast, endless depths."
+        "Just kidding. But I always wanted a pet.",
+        "Never could have one though."
       ],
       "correctOptions": [
         "ohno"
       ],
-      "goodReaction": "Ah, you sense the dread too.",
-      "badReaction": "Braver than most, I see.",
-      "next": "But enough about depths."
+      "hahaReaction": "My loss is your comedy? That's sick!",
+      "dotdotdotReaction": "Can't even acknowledge my pain? Heartless!",
+      "ohnoReaction": "You understand, it's nice to connect.",
+      "next": "Let's change the subject..."
     },
     {
       "text": [
-        "I'd tell you a cemetery joke,",
-        "But you've probably heard it. It's dead popular."
+        "Why don't skeletons fight each other?",
+        "They don't have the guts."
       ],
       "correctOptions": [
         "haha"
       ],
-      "goodReaction": "Enjoy the grave humor, do you?",
-      "badReaction": "Too grim?",
-      "next": "Speaking of which..."
+      "hahaReaction": "A bit of dark humor!",
+      "dotdotdotReaction": "No reaction? Are you dead inside?",
+      "ohnoReaction": "Afraid of a skeleton joke? It's humor, not a curse!",
+      "next": "Speaking of fighting..."
     },
     {
       "text": [
-        "I often wander through graveyards.",
-        "There's a strange comfort among the tombstones."
+        "I used to get into a lot of fights as a kid.",
+        "I guess I had a lot of anger."
       ],
       "correctOptions": [
         "dotdotdot"
       ],
-      "goodReaction": "It's nice to find someone who listens.",
-      "badReaction": "Too morbid a topic for you?",
-      "next": "Well, let's change the subject..."
+      "hahaReaction": "You find my misery amusing? That's twisted!",
+      "dotdotdotReaction": "It's tough, but I've grown.",
+      "ohnoReaction": "Don't patronize me with your pity!",
+      "next": "Enough about the past."
+    },
+    {
+      "text": [
+        "I wrote a song about a tortilla.",
+        "Well, it’s more of a wrap."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "hahaReaction": "Music to my ears!",
+      "dotdotdotReaction": "Too dense to get a simple joke?",
+      "ohnoReaction": "It's a light-hearted joke! Stop being so dramatic!",
+      "next": "On a musical note..."
+    },
+    {
+      "text": [
+        "I always loved music,",
+        "But I never learned to play an instrument."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "hahaReaction": "Mocking my regret? You're just heartless!",
+      "dotdotdotReaction": "Ignoring my sorrow? That's cold!",
+      "ohnoReaction": "It's a regret of mine.",
+      "next": "Let's wrap this up..."
     }
   ]
 }
