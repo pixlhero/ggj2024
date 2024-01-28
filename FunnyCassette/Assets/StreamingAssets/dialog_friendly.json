@@ -1,0 +1,100 @@
+{
+  "dialogs": [
+    {
+      "text": [
+        "Did you hear about the claustrophobic astronaut?",
+        "He just needed a little space."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "hahaReaction": "Glad you liked it!",
+      "dotdotdotReaction": "What, no laugh? Was it too out of this world for you?",
+      "ohnoReaction": "A joke about space and you're upset? Lighten up!"
+    },
+    {
+      "text": [
+        "I always wanted to be an astronaut,",
+        "But I was afraid of heights."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "hahaReaction": "Oh, you find my fears funny? That's cold.",
+      "dotdotdotReaction": "Silent? My dreams are floating away here!",
+      "ohnoReaction": "Yeah, dreams can be funny."
+    },
+    {
+      "text": [
+        "What do you call a bear with no teeth?",
+        "A gummy bear!"
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "hahaReaction": "Bears and jokes, a perfect match!",
+      "dotdotdotReaction": "Not even a chuckle? That's unbearable!",
+      "ohnoReaction": "Sad? It's a joke, not a wildlife documentary!"
+    },
+    {
+      "text": [
+        "Just kidding. But I always wanted a pet.",
+        "Never could have one though."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "hahaReaction": "Laughing at my misfortune? That's harsh!",
+      "dotdotdotReaction": "Ignoring my story? That's just rude.",
+      "ohnoReaction": "You understand, it's nice to connect."
+    },
+    {
+      "text": [
+        "Why don't skeletons fight each other?",
+        "They don't have the guts."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "hahaReaction": "A bit of dark humor!",
+      "dotdotdotReaction": "No reaction? What, did I tickle your funny bone too hard?",
+      "ohnoReaction": "Scared of a skeleton joke? It's humor, not horror!"
+    },
+    {
+      "text": [
+        "I used to get into a lot of fights as a kid.",
+        "I guess I had a lot of anger."
+      ],
+      "correctOptions": [
+        "dotdotdot"
+      ],
+      "hahaReaction": "Finding joy in my troubled past? You're twisted!",
+      "dotdotdotReaction": "It's tough, but I've grown.",
+      "ohnoReaction": "Pity? I don't need your pity!"
+    },
+    {
+      "text": [
+        "I wrote a song about a tortilla.",
+        "Well, it’s more of a wrap."
+      ],
+      "correctOptions": [
+        "haha"
+      ],
+      "hahaReaction": "Music to my ears!",
+      "dotdotdotReaction": "Speechless? It's a joke, not a riddle!",
+      "ohnoReaction": "It's a joke, not a tragedy! Cheer up!"
+    },
+    {
+      "text": [
+        "I always loved music,",
+        "But I never learned to play an instrument."
+      ],
+      "correctOptions": [
+        "ohno"
+      ],
+      "hahaReaction": "Mocking my unfulfilled dreams? You're cruel!",
+      "dotdotdotReaction": "Too shocked to speak? It's just a sad tune.",
+      "ohnoReaction": "It's a regret of mine."
+    }
+  ]
+}
