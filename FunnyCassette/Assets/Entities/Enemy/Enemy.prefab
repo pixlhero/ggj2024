@@ -142,7 +142,7 @@ MonoBehaviour:
   frequencyLevel: 2
   charWaitingTime: 0.08
   sentenceWaitingTime: 1.076
-  predictableSpeech: 0
+  predictableSpeech: 1
 --- !u!1 &2098274487144707747
 GameObject:
   m_ObjectHideFlags: 0
