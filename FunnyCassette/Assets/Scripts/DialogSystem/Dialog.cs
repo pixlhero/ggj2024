@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 
 [Serializable]
@@ -11,6 +12,8 @@ public class Dialog
     public static Dialog CreateFromJSON()
     {
         string jsonString = File.ReadAllText(Application.streamingAssetsPath + "/dialog.json");
-        return JsonUtility.FromJson<Dialog>(jsonString);
+        var dialog = JsonUtility.FromJson<Dialog>(jsonString);
+        dialog.dialogs = dialog.dialogs.OrderBy(x => Guid.NewGuid()).ToList();
+        return dialog;
     }
 }
