@@ -1,0 +1,108 @@
+{
+    "dialogs": [
+        {
+            "text": [
+                "Ever hear about the paper that stood up to the pen?",
+                "It was quite tear-able."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Ah, a fan of the classics, I see!",
+            "dotdotdotReaction": "Silence over a paper joke? Was it not sharp enough for you?!",
+            "ohnoReaction": "It's just a light-hearted pun! Don't get torn up about it!",
+            "next": "Speaking of writing..."
+        },
+        {
+            "text": [
+                "I tried writing a novel once.",
+                "Never got past the first page."
+            ],
+            "correctOptions": [
+                "ohno"
+            ],
+            "hahaReaction": "My failed literary attempt amuses you? That's low!",
+            "dotdotdotReaction": "Too bored to comment on my life's unfinished chapter?!",
+            "ohnoReaction": "Yeah, it's a common story, isn't it?",
+            "next": "Let's switch topics..."
+        },
+        {
+            "text": [
+                "What do you call an alligator in a vest?",
+                "An investigator."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Glad to see you like my snappy humor!",
+            "dotdotdotReaction": "What, my joke didn't suit you? Too sophisticated?!",
+            "ohnoReaction": "An alligator joke bites, and you wince? Come on!",
+            "next": "On a related note..."
+        },
+        {
+            "text": [
+                "Animals always fascinated me.",
+                "Especially the predators, so cunning and fierce."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "You find the circle of life amusing? That's dark!",
+            "dotdotdotReaction": "It's intriguing, isn't it? The raw nature of survival.",
+            "ohnoReaction": "Afraid of a little wild talk? It's nature, not a horror show!",
+            "next": "Changing the subject..."
+        },
+        {
+            "text": [
+                "I love cooking with spices.",
+                "But I always add too much thyme. It's about seasoning!"
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Ah, a connoisseur of puns, excellent!",
+            "dotdotdotReaction": "No taste for culinary humor? Too bland for you?!",
+            "ohnoReaction": "Cooking puns too hot to handle? Please, it's just thyme!",
+            "next": "While we're on the topic of hobbies..."
+        },
+        {
+            "text": [
+                "Gardening was a hobby of mine.",
+                "But everything I planted withered. I suppose I never had the green thumb."
+            ],
+            "correctOptions": [
+                "ohno"
+            ],
+            "hahaReaction": "My gardening misadventures are funny to you? That's harsh!",
+            "dotdotdotReaction": "Ignoring my failed attempts at nurturing life? That stings!",
+            "ohnoReaction": "Yes, not all of us are meant to be gardeners, I guess.",
+            "next": "On a more positive note..."
+        },
+        {
+            "text": [
+                "Why don't we ever tell secrets on a farm?",
+                "Because the potatoes have eyes and the corn has ears!"
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Enjoying the farm life humor, are we?",
+            "dotdotdotReaction": "What, is farm surveillance too corny for you?!",
+            "ohnoReaction": "Worried about vegetable espionage? It's a joke, not a conspiracy!",
+            "next": "After all this talk of farms..."
+        },
+        {
+            "text": [
+                "I often dream of living on a farm.",
+                "A simpler life, closer to nature."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My pastoral dreams amuse you? Not everyone's cut out for city life!",
+            "dotdotdotReaction": "It's a peaceful thought, isn't it? Escaping the noise.",
+            "ohnoReaction": "It's not so outlandish, dreaming of tranquility. No need to be dismayed!",
+            "next": "But dreams are just dreams, right? Let's get back to reality..."
+        }
+    ]
+}

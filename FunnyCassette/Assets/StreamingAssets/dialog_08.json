@@ -1,0 +1,108 @@
+{
+    "dialogs": [
+        {
+            "text": [
+                "Why was the computer cold?",
+                "It left its Windows open."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Glad to see my tech humor hasn't frozen over your sense of fun.",
+            "dotdotdotReaction": "Too chilly in the digital realm for you? Maybe close some tabs.",
+            "ohnoReaction": "It's a breezy joke, not a system error! No need to boot up your worries.",
+            "next": "Diving deeper into digital waters..."
+        },
+        {
+            "text": [
+                "I've spent nights debugging code.",
+                "Felt like I was chasing ghosts in the machine."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My digital ghost hunt amuses you? It was quite the spectral chase!",
+            "dotdotdotReaction": "Yes, the ethereal pursuit of perfection in a sea of code.",
+            "ohnoReaction": "The concept of digital phantoms too eerie? It's just a metaphor for the elusive bugs.",
+            "next": "Escaping the ghostly grip of technology..."
+        },
+        {
+            "text": [
+                "What did the fish say when it hit the wall?",
+                "Dam."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Swimming in the stream of humor, I see! Don't let the current hold you back.",
+            "dotdotdotReaction": "Did that one not float your boat? Perhaps it was too upstream.",
+            "ohnoReaction": "It's a fish tale, not a tragedy! No need to flounder.",
+            "next": "From the depths of the sea to the shores of reflection..."
+        },
+        {
+            "text": [
+                "I find solace by the sea.",
+                "Its endless waves remind me of life's ebb and flow."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "The ocean's vastness tickles you? It's deep, not just wet!",
+            "dotdotdotReaction": "Indeed, there's a profound peace in watching the waves.",
+            "ohnoReaction": "Does the sea's infinity overwhelm you? It's vast but inviting.",
+            "next": "Sailing from the sea's embrace to the warmth of the hearth..."
+        },
+        {
+            "text": [
+                "Why did the old man fall in the well?",
+                "Because he couldn't see that well."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Ah, plunging into the depths of humor, you've surfaced with a smile!",
+            "dotdotdotReaction": "Not seeing the humor? Maybe it's a bit too deep.",
+            "ohnoReaction": "It's light-hearted, not a cautionary tale! No need to wallow.",
+            "next": "Climbing out of the well of wit..."
+        },
+        {
+            "text": [
+                "Exploring ancient ruins has always been a dream of mine.",
+                "To touch history, to feel the stories embedded in the stones."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My historical aspirations amuse you? There's more to life than the present!",
+            "dotdotdotReaction": "Exactly, there's an indescribable magic in connecting with the past.",
+            "ohnoReaction": "Intimidated by the weight of history? It's a journey, not a burden.",
+            "next": "From the echoes of history to the whispers of the wind..."
+        },
+        {
+            "text": [
+                "Why can't you give Elsa a balloon?",
+                "Because she will let it go."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Caught in a flurry of laughter, I see! No need to hold it back anymore.",
+            "dotdotdotReaction": "Too cold? Perhaps the joke drifted over a frozen landscape.",
+            "ohnoReaction": "It's a playful jest, not a frostbite! Thaw out your heart.",
+            "next": "Leaving the icy puns to melt in the sun..."
+        },
+        {
+            "text": [
+                "Stargazing makes me ponder our place in the universe.",
+                "Are we alone, or is someone else looking back at us?"
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "The cosmic question gets a chuckle? It's an existential inquiry, not a joke!",
+            "dotdotdotReaction": "Indeed, the night sky holds more questions than answers.",
+            "ohnoReaction": "The vastness of space too chilling? It's a wonder, not a void.",
+            "next": "From the mysteries of the cosmos to the simplicity of the dawn..."
+        }
+    ]
+}

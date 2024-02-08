@@ -1,0 +1,108 @@
+{
+    "dialogs": [
+        {
+            "text": [
+                "What do you call an elephant that doesn’t matter?",
+                "An irrelephant."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Glad to see you appreciate the weight of this humor!",
+            "dotdotdotReaction": "Too large of a joke to handle? I thought it packed a punch.",
+            "ohnoReaction": "No need for a trunkful of tears—it's just a bit of fun!",
+            "next": "Marching on from the jungle..."
+        },
+        {
+            "text": [
+                "Visiting the zoo always brings mixed feelings.",
+                "Fascinated by the creatures, yet saddened by their cages."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My zoo dilemma amuses you? It's a complex habitat of emotions!",
+            "dotdotdotReaction": "Indeed, it's a bittersweet symphony of life behind bars.",
+            "ohnoReaction": "The cagey subject hit a nerve? It's a jungle of ethics out there.",
+            "next": "Swinging from ethical vines to lighter branches..."
+        },
+        {
+            "text": [
+                "Why did the coffee file a police report?",
+                "It got mugged."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Brewing up some laughter, I see! Glad it percolated your sense of humor.",
+            "dotdotdotReaction": "This blend too bitter for you? I aimed for a medium roast of comedy.",
+            "ohnoReaction": "It's a cup of jest, not a pot of despair! Don't let it steep in sorrow.",
+            "next": "Pouring out from caffeine streams..."
+        },
+        {
+            "text": [
+                "My morning ritual includes contemplation over coffee.",
+                "It's my liquid lens to the world."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "You find my ritual brewing amusing? Each sip is a steep in thought!",
+            "dotdotdotReaction": "Indeed, a warm cup holds more than just brew; it's a vessel for reflection.",
+            "ohnoReaction": "Coffee contemplation too bitter a concept? It's an acquired taste.",
+            "next": "From the depths of a coffee cup to the expanse of the sky..."
+        },
+        {
+            "text": [
+                "What's a cloud's favorite musical instrument?",
+                "The thunder drum."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "A storm of applause for your sense of humor! Lightning sharp!",
+            "dotdotdotReaction": "Under the weather with that one? It was meant to clear the air!",
+            "ohnoReaction": "It's a tempest in a teapot, not a cyclone! No need for turbulence.",
+            "next": "Floating above the weathered jests..."
+        },
+        {
+            "text": [
+                "Storm chasing exhilarates me.",
+                "It's nature's opera, grand and unpredictable."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My tempestuous hobby has you thunderstruck with laughter?",
+            "dotdotdotReaction": "Indeed, there's a raw beauty in the chaos of the skies.",
+            "ohnoReaction": "Overcast with concern? The chase is thrilling, not threatening.",
+            "next": "After the storm clears, revealing serene skies..."
+        },
+        {
+            "text": [
+                "Why don’t we ever tell secrets on a farm?",
+                "Because the potatoes have eyes, and the corn has ears."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Harvesting a crop of chuckles, I see! The field is fertile with humor.",
+            "dotdotdotReaction": "Agriculturally aghast? It's just barnyard banter!",
+            "ohnoReaction": "Worried about vegetative eavesdroppers? It's purely plant-based jest!",
+            "next": "Tilling the comedic soil for more growth..."
+        },
+        {
+            "text": [
+                "Gardening teaches patience and care.",
+                "From tiny seeds, great things can grow."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My green thumb musings sprout laughter? It's more than just dirt and water.",
+            "dotdotdotReaction": "Indeed, it's a lesson in nurturing, both plants and perseverance.",
+            "ohnoReaction": "Does the garden's slow bloom cause dismay? Patience, for nature takes its course.",
+            "next": "Beyond the garden's gate, our journey continues..."
+        }
+    ]
+}

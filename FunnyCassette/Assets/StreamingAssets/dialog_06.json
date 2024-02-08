@@ -1,0 +1,108 @@
+{
+    "dialogs": [
+        {
+            "text": [
+                "What did the janitor say when he jumped out of the closet?",
+                "Supplies!"
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Ah, got a laugh! Good to see my cleaning humor sweeps you off your feet.",
+            "dotdotdotReaction": "What, not tidy enough for a chuckle? I thought it was spotless humor.",
+            "ohnoReaction": "It's a clean joke, lighten up! No need to mop around.",
+            "next": "While we're clearing the air..."
+        },
+        {
+            "text": [
+                "Cleaning has always been therapeutic for me.",
+                "It's all about bringing order to chaos."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My method of meditation is amusing? Well, to each their own broom!",
+            "dotdotdotReaction": "Exactly, there's a certain calm in cleanliness.",
+            "ohnoReaction": "Not a fan of tidying up? It's not just about the dust.",
+            "next": "Speaking of chaos..."
+        },
+        {
+            "text": [
+                "Why did the chicken go to the séance?",
+                "To talk to the other side."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Crossing over to the humorous side, I see! Well done.",
+            "dotdotdotReaction": "Spirits too poultry for you? It's just a bit of fowl play!",
+            "ohnoReaction": "It's a lighthearted joke, don't be chicken!",
+            "next": "On a more spiritual note..."
+        },
+        {
+            "text": [
+                "I've always been curious about the afterlife.",
+                "What mysteries lie beyond, you know?"
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "Curiosity about the unknown tickles you? It's a grave matter to some!",
+            "dotdotdotReaction": "Indeed, the beyond holds secrets we can only guess at.",
+            "ohnoReaction": "The unknown scares you? It's a universal question, no need for alarm.",
+            "next": "Shifting from the ethereal to the earthly..."
+        },
+        {
+            "text": [
+                "I tried gardening once.",
+                "Turns out I have a talent for growing weeds."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "A green thumb for the unwanted, huh? At least it's a growth experience!",
+            "dotdotdotReaction": "Not the kind of cultivation you respect? It's natural selection in action!",
+            "ohnoReaction": "Weeds, not wonders, got you down? It's all part of nature's comedy.",
+            "next": "Digging deeper into hobbies..."
+        },
+        {
+            "text": [
+                "Hiking helps me clear my head.",
+                "There's something about the wilderness that speaks to me."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My outdoor escapades amuse you? Fresh air's better than stale jokes!",
+            "dotdotdotReaction": "Yes, the call of the wild is both loud and clear.",
+            "ohnoReaction": "The great outdoors too daunting? It's an adventure, not a trial.",
+            "next": "Speaking of nature's call..."
+        },
+        {
+            "text": [
+                "Why don't trees use the train?",
+                "They can't stand the thought of leaving their roots."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Branching out into tree humor, I see! Glad you're rooted in comedy.",
+            "dotdotdotReaction": "Too wooden for your taste? I thought it was solid material.",
+            "ohnoReaction": "A tree joke leaves you stumped? It's natural humor!",
+            "next": "Rooting around for more topics..."
+        },
+        {
+            "text": [
+                "I've always felt a strong connection to trees.",
+                "Their enduring strength and resilience inspire me."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My dendrophilic tendencies are a source of amusement? They're more than bark deep!",
+            "dotdotdotReaction": "Indeed, there's much to learn from the silent strength of trees.",
+            "ohnoReaction": "Does the thought of being tree-bound make you leaf uncomfortable? It's grounding, really.",
+            "next": "Leaving the forest behind..."
+        }
+    ]
+}

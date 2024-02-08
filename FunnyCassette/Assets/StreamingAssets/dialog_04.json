@@ -1,0 +1,108 @@
+{
+    "dialogs": [
+        {
+            "text": [
+                "Why do programmers prefer dark mode?",
+                "Because light attracts bugs!"
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Caught that one, did you? Tech humor at its finest.",
+            "dotdotdotReaction": "Not bright enough for you, or just avoiding the spotlight?",
+            "ohnoReaction": "It's a light-hearted tech joke, not a bug report!",
+            "next": "On a digital note..."
+        },
+        {
+            "text": [
+                "I once tried to learn programming.",
+                "Ended up with more bugs than a summer night."
+            ],
+            "correctOptions": [
+                "ohno"
+            ],
+            "hahaReaction": "Laughing at my coding catastrophe? That's harsh!",
+            "dotdotdotReaction": "Code not compiling in your head either, huh?",
+            "ohnoReaction": "Yeah, not everyone's cut out for the digital world.",
+            "next": "Switching from digital to analog..."
+        },
+        {
+            "text": [
+                "What's a vampire's favorite fruit?",
+                "A blood orange."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "A juicy bit of humor there! Glad you're not too drained to laugh.",
+            "dotdotdotReaction": "What, did that joke suck the life out of the room?",
+            "ohnoReaction": "It's just a pun, no need to be bloodthirsty about it!",
+            "next": "Speaking of the supernatural..."
+        },
+        {
+            "text": [
+                "I've always been drawn to the night.",
+                "Its quiet, its mystery, it feels like home."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "You find the night amusing? It's not all shadows and scare.",
+            "dotdotdotReaction": "Yes, there's a certain peace in the darkness.",
+            "ohnoReaction": "The night's chill got to you? It's warmer than you think.",
+            "next": "But even night owls see the dawn..."
+        },
+        {
+            "text": [
+                "I once stayed up all night trying to find where the sun went.",
+                "Then it dawned on me."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Ah, you've seen the light of humor! Excellent.",
+            "dotdotdotReaction": "In the dark about this one, or just not your type of sunrise?",
+            "ohnoReaction": "Too early for dawn jokes? It's never too early for a laugh!",
+            "next": "From dawn till dusk..."
+        },
+        {
+            "text": [
+                "The early morning has a clarity I can't find anywhere else.",
+                "It's when I do my best thinking."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "Morning clarity a joke to you? I guess we're not all morning people.",
+            "dotdotdotReaction": "The quiet of morning does have its own wisdom.",
+            "ohnoReaction": "Dawn's serenity lost on you? It's not for everyone.",
+            "next": "And as the day begins..."
+        },
+        {
+            "text": [
+                "Why did the coffee file a police report?",
+                "It got mugged!"
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Brewing up some laughter, I see! Good to keep things percolating.",
+            "dotdotdotReaction": "This joke not your cup of tea? Or should I say coffee?",
+            "ohnoReaction": "It's a coffee joke, not a bitter brew! Lighten up!",
+            "next": "While we're on the subject of beverages..."
+        },
+        {
+            "text": [
+                "I can't start my day without coffee.",
+                "It's my liquid motivation."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My caffeine dependency amuses you? Well, it's a common bond for many.",
+            "dotdotdotReaction": "Ah, a fellow appreciator of the sacred bean.",
+            "ohnoReaction": "Coffee not your thing? It's more than just a drink; it's a ritual.",
+            "next": "But life isn't all about caffeine, is it?"
+        }
+    ]
+}

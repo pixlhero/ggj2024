@@ -1,0 +1,108 @@
+{
+    "dialogs": [
+        {
+            "text": [
+                "Why was the math book sad?",
+                "Because it had too many problems."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Glad you found that amusing. Math can be a real problem, huh?",
+            "dotdotdotReaction": "What, no laugh? Too complex for you?",
+            "ohnoReaction": "It's a joke, not a math test! Don't take it so seriously!",
+            "next": "Since we're on the subject of school..."
+        },
+        {
+            "text": [
+                "I was never good at math in school.",
+                "Always felt like I was missing something."
+            ],
+            "correctOptions": [
+                "ohno"
+            ],
+            "hahaReaction": "You think my struggles are funny? That's quite insensitive!",
+            "dotdotdotReaction": "Ignoring my academic pain? That's cold!",
+            "ohnoReaction": "Yeah, it's a common struggle, isn't it?",
+            "next": "But enough about math..."
+        },
+        {
+            "text": [
+                "What do you call a boomerang that won't come back?",
+                "A stick."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Exactly! It's just a stick. Nothing to get worked up about.",
+            "dotdotdotReaction": "Silent treatment for a boomerang joke? I thought it was pretty straightforward!",
+            "ohnoReaction": "It's a joke, not a lost cause! Lighten up a bit!",
+            "next": "Speaking of things returning..."
+        },
+        {
+            "text": [
+                "I once lost something very dear to me.",
+                "Never did find it again."
+            ],
+            "correctOptions": [
+                "ohno"
+            ],
+            "hahaReaction": "Laughing at my loss? That's heartless!",
+            "dotdotdotReaction": "Too uncomfortable to comment? It was a tough time, indeed.",
+            "ohnoReaction": "It's hard losing something important, right?",
+            "next": "On a lighter note..."
+        },
+        {
+            "text": [
+                "I tried to catch fog yesterday.",
+                "Mist."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Caught you smiling! It's a light mist of humor.",
+            "dotdotdotReaction": "What, fog jokes not clear enough for you?",
+            "ohnoReaction": "It's a pun, not a weather alert! No need for gloom!",
+            "next": "Since we're talking about the weather..."
+        },
+        {
+            "text": [
+                "Rainy days always make me reflective.",
+                "Something about the sound of rain..."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "You find my musing amusing? I guess it's a bit poetic.",
+            "dotdotdotReaction": "Yeah, there's a certain calm to it, isn't there?",
+            "ohnoReaction": "Too dreary for you? Not everyone enjoys the rain, I suppose.",
+            "next": "But let's not get washed away in the melancholy..."
+        },
+        {
+            "text": [
+                "Ever wonder why we never see ghosts in modern clothes?",
+                "I guess fashion sense dies too."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "A ghost of a smile! Good, you're keeping up.",
+            "dotdotdotReaction": "No reaction? Is my humor too transparent for you?",
+            "ohnoReaction": "It's a spectral joke, not a haunting! Don't be so grim.",
+            "next": "Ghost stories aside..."
+        },
+        {
+            "text": [
+                "I've always been fascinated by the paranormal.",
+                "But never had a ghostly encounter myself."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My interest in ghosts gets a laugh? I'm serious about it!",
+            "dotdotdotReaction": "It's intriguing, the unknown. Thanks for listening.",
+            "ohnoReaction": "Scared or skeptical? The paranormal isn't for everyone.",
+            "next": "Enough spooky talk for now..."
+        }
+    ]
+}

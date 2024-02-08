@@ -1,0 +1,108 @@
+{
+    "dialogs": [
+        {
+            "text": [
+                "What do you call a belt made out of watches?",
+                "A waist of time."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Tickled by the timepiece humor, I see! Time well spent.",
+            "dotdotdotReaction": "Not wound up by the pun? Perhaps it didn't 'watch' out for your funny bone.",
+            "ohnoReaction": "It's a playful jest, not a time sink! Loosen up the dial.",
+            "next": "From the fabric of time to the threads of fate..."
+        },
+        {
+            "text": [
+                "Tailoring has always been a hobby of mine.",
+                "There's something about creating that stitches the soul together."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My threadbare tale weaves amusement? Craftsmanship is no mere patchwork!",
+            "dotdotdotReaction": "Indeed, each stitch is a step towards wholeness, in fabric and spirit.",
+            "ohnoReaction": "The texture of tailoring too tangled? It's an art, not a knot.",
+            "next": "Weaving through life's tapestry..."
+        },
+        {
+            "text": [
+                "Why did the scarecrow become a successful banker?",
+                "Because he was outstanding in his field!"
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Harvesting chuckles, are we? It seems my finance humor has yielded interest.",
+            "dotdotdotReaction": "Fielding silence on that one? Maybe it's too corny.",
+            "ohnoReaction": "No need for fiscal fear—it's a jest, not an audit!",
+            "next": "From fields of gold to rivers of fortune..."
+        },
+        {
+            "text": [
+                "River rafting always exhilarated me.",
+                "It's the rush of water, the unpredictability of nature's course."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "Ripples of laughter for the rafting? It's an adventure, not a comedy sketch!",
+            "dotdotdotReaction": "Indeed, there's a raw power in surrendering to the river's flow.",
+            "ohnoReaction": "Wary of the water's whims? It's thrilling, not threatening.",
+            "next": "Ebbing away from the river's edge..."
+        },
+        {
+            "text": [
+                "What’s orange and sounds like a parrot?",
+                "A carrot."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Peeling out laughter with vegetable puns, I see! Well played.",
+            "dotdotdotReaction": "Too subdued for a chuckle? Perhaps it didn't quite 'produce' the expected humor.",
+            "ohnoReaction": "It's a simple jest, not a puzzle! No need to root around for deeper meaning.",
+            "next": "From the ground of humor to the soil of contemplation..."
+        },
+        {
+            "text": [
+                "Philosophy has always intrigued me.",
+                "The pursuit of wisdom, the exploration of ideas beyond our grasp."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My philosophical pondering prompts amusement? Thought runs deeper than laughter.",
+            "dotdotdotReaction": "Indeed, there's a universe within our minds, waiting to be discovered.",
+            "ohnoReaction": "Intimidated by the immensity of thought? It's a journey, not a sprint.",
+            "next": "From the depths of thought to the simplicity of being..."
+        },
+        {
+            "text": [
+                "Why are ghosts such bad liars?",
+                "Because they are too transparent."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Spirited away by ghostly jests, I see! Transparency has its humor.",
+            "dotdotdotReaction": "Phantom fun not manifesting a smile? Perhaps it's too ethereal.",
+            "ohnoReaction": "It's a specter of humor, not a haunt! No need to be spooked.",
+            "next": "Drifting from the ghostly echoes to the light of day..."
+        },
+        {
+            "text": [
+                "Sunrises remind me of the endless cycle of beginnings and endings.",
+                "Each day a new canvas, painted with the light of possibilities."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "Dawn's beauty brings you joy? It's the art of nature, not just the crack of dawn.",
+            "dotdotdotReaction": "Indeed, the promise of a new day is a masterpiece in itself.",
+            "ohnoReaction": "The break of day too glaring? It's a gentle awakening, not a blinding light.",
+            "next": "As the day unfolds before us..."
+        }
+    ]
+}

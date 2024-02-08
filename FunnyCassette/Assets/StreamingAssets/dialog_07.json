@@ -1,0 +1,108 @@
+{
+    "dialogs": [
+        {
+            "text": [
+                "What do you call an alligator detective?",
+                "An investi-gator."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Ah, chuckles for the reptilian sleuth! Glad it snapped you up.",
+            "dotdotdotReaction": "No reaction? Is the mystery too deep, or are you just swamp-ed in thought?",
+            "ohnoReaction": "It's a pun, not a cold case! Don't snap at me!",
+            "next": "On the trail of more tales..."
+        },
+        {
+            "text": [
+                "I've always been fascinated by mysteries.",
+                "The thrill of the unknown keeps me searching for clues."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My quest for clues amuses you? Every detective needs a laugh.",
+            "dotdotdotReaction": "Indeed, there's something compelling about unraveling a good mystery.",
+            "ohnoReaction": "Intimidated by the unknown? It's just an adventure waiting to happen!",
+            "next": "Peering into the shadows..."
+        },
+        {
+            "text": [
+                "Why do we tell actors to 'break a leg'?",
+                "Because every play has a cast."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "A round of applause for your sense of humor! You're in the spotlight now.",
+            "dotdotdotReaction": "Stage fright got your tongue? It's only a bit of drama!",
+            "ohnoReaction": "Too dramatic? It's showbiz, not a tragedy!",
+            "next": "Curtains up on the next act..."
+        },
+        {
+            "text": [
+                "I once tried acting.",
+                "Turns out, my stage presence is more ghostly than leading man."
+            ],
+            "correctOptions": [
+                "ohno"
+            ],
+            "hahaReaction": "Laughing at my stage woes? Guess I played the fool well.",
+            "dotdotdotReaction": "Silent critique? I'll take that as constructive.",
+            "ohnoReaction": "Yeah, not everyone's cut out for the limelight.",
+            "next": "Shifting from the stage to the screen..."
+        },
+        {
+            "text": [
+                "What's a computer's favorite snack?",
+                "Microchips!"
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Digital humor bytes well with you, I see! Crunchy!",
+            "dotdotdotReaction": "Not computing? Maybe it needs more RAM—Random Access to Mirth.",
+            "ohnoReaction": "It's a byte-sized joke, not a hard drive crash! Lighten up!",
+            "next": "Logging off from tech talk..."
+        },
+        {
+            "text": [
+                "Technology overwhelms me sometimes.",
+                "It's like we're living in a world built by science fiction."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My tech trepidation gets a giggle? It's a modern maze!",
+            "dotdotdotReaction": "Yes, it's as if we've stepped into the future without a map.",
+            "ohnoReaction": "Too much too fast? The future is now, but it's okay to pace ourselves.",
+            "next": "From future shock to present awe..."
+        },
+        {
+            "text": [
+                "I enjoy a quiet evening of reading.",
+                "Books are windows to other worlds."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My literary leanings amuse you? There's adventure in tranquility.",
+            "dotdotdotReaction": "Indeed, there's nothing like a good book to transport you.",
+            "ohnoReaction": "Not a fan of the written word? Each page is a journey.",
+            "next": "Turning the page to a new chapter..."
+        },
+        {
+            "text": [
+                "Why did the bicycle fall over?",
+                "It was two-tired."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Pedaling puns your way, and you're rolling with laughter! Excellent.",
+            "dotdotdotReaction": "Couldn't keep up? It's just a bit of cycle-logical humor.",
+            "ohnoReaction": "No need to get deflated over a bike joke! Pump up the fun.",
+            "next": "From pedaling puns to cruising through life's roads..."
+        }
+    ]
+}

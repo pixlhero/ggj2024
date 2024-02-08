@@ -1,0 +1,108 @@
+{
+    "dialogs": [
+        {
+            "text": [
+                "How does a penguin build its house?",
+                "Igloos it together."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Glad to see my cold humor doesn't leave you frozen.",
+            "dotdotdotReaction": "Chilly reception to that one, huh? Not cool enough?",
+            "ohnoReaction": "No need for the cold shoulder—it's just an icebreaker!",
+            "next": "Staying on chilly topics..."
+        },
+        {
+            "text": [
+                "I once got stuck in a blizzard.",
+                "Never felt colder in my life."
+            ],
+            "correctOptions": [
+                "ohno"
+            ],
+            "hahaReaction": "My frosty tale cracks you up? That's ice cold!",
+            "dotdotdotReaction": "Frozen by my story? It was quite the chilling experience.",
+            "ohnoReaction": "Yeah, it was a bone-chilling adventure for sure.",
+            "next": "Warming up to a different subject..."
+        },
+        {
+            "text": [
+                "Why don't some couples go to the gym?",
+                "Because some relationships don't work out!"
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Looks like we're flexing our humor muscles today!",
+            "dotdotdotReaction": "Too much of a stretch for you? I thought it was fairly lightweight humor.",
+            "ohnoReaction": "It's a joke, not a breakup! No need to sweat it.",
+            "next": "Speaking of workouts..."
+        },
+        {
+            "text": [
+                "I tried yoga to find inner peace.",
+                "I found out I'm not very flexible."
+            ],
+            "correctOptions": [
+                "ohno"
+            ],
+            "hahaReaction": "Bending over backwards from laughter, I see? Yoga's no joke!",
+            "dotdotdotReaction": "Struggling to keep up? It's okay, yoga isn't for everyone.",
+            "ohnoReaction": "Yes, it was a stretch, but all journeys start somewhere.",
+            "next": "On a more balanced note..."
+        },
+        {
+            "text": [
+                "I bought shoes from a drug dealer once.",
+                "I don't know what he laced them with, but I was tripping all day!"
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Walking on the wild side of humor, I see. Careful where you step!",
+            "dotdotdotReaction": "Not sure how to react? It's a step in the funny direction!",
+            "ohnoReaction": "Worried about the side effects? It's just a high tale!",
+            "next": "Since we're on the move..."
+        },
+        {
+            "text": [
+                "Traveling has always been a dream of mine.",
+                "To see the world's wonders with my own eyes."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My wanderlust amuses you? Guess it's a journey not everyone understands.",
+            "dotdotdotReaction": "Yes, the world is full of sights to see and experiences to cherish.",
+            "ohnoReaction": "Does the idea of travel intimidate you? It's an adventure worth taking.",
+            "next": "But enough daydreaming for now..."
+        },
+        {
+            "text": [
+                "What do you call a fake noodle?",
+                "An impasta."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Caught in the net of pasta puns, I see!",
+            "dotdotdotReaction": "Not al dente enough for your taste? Too uncooked?",
+            "ohnoReaction": "It's pasta humor, not a food fraud! Lighten up a bit!",
+            "next": "While we're in the kitchen..."
+        },
+        {
+            "text": [
+                "Cooking is like therapy for me.",
+                "A way to create and unwind, all in one."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "My culinary coping mechanism tickles you? To each their own flavor!",
+            "dotdotdotReaction": "Indeed, there's something meditative about the art of cooking.",
+            "ohnoReaction": "Not everyone finds solace in the kitchen, I suppose. It's a personal recipe.",
+            "next": "But let's not stew over it..."
+        }
+    ]
+}

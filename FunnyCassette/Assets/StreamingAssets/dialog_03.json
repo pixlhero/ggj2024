@@ -1,0 +1,108 @@
+{
+    "dialogs": [
+        {
+            "text": [
+                "Why don't skeletons fight each other?",
+                "They don't have the guts."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "You've got a bone to pick with humor, I see! Good one.",
+            "dotdotdotReaction": "What, too spineless to laugh at a skeleton joke?",
+            "ohnoReaction": "It's a joke, lighten up! No need to get rattled.",
+            "next": "On a bony note..."
+        },
+        {
+            "text": [
+                "I've always been intrigued by anatomy.",
+                "The complexity of our bodies is fascinating."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "Amused by anatomy? It's science, not comedy!",
+            "dotdotdotReaction": "Indeed, the human body is a marvel of nature.",
+            "ohnoReaction": "Unsettled by the inner workings? It's natural, not gory!",
+            "next": "Speaking of inner workings..."
+        },
+        {
+            "text": [
+                "I heard a great joke about memory,",
+                "But I forgot how it goes."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Laughing at forgetfulness? At least you remember how to laugh!",
+            "dotdotdotReaction": "Memory lapse got you speechless? It happens to the best of us.",
+            "ohnoReaction": "Worried about my memory? It's just a joke, not a diagnosis!",
+            "next": "On the topic of memory..."
+        },
+        {
+            "text": [
+                "I've forgotten more than I remember.",
+                "Isn't it curious how memories fade?"
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "Finding forgetfulness funny? It's more bittersweet than humorous.",
+            "dotdotdotReaction": "It's a peculiar aspect of life, how memories slip away.",
+            "ohnoReaction": "Concerned about fading memories? It's a natural part of life.",
+            "next": "But let's not dwell on the past..."
+        },
+        {
+            "text": [
+                "Did you hear about the fire at the circus?",
+                "It was in tents!"
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "A fiery sense of humor! Glad you're enjoying the show.",
+            "dotdotdotReaction": "Too hot to handle? It's just a bit of circus fun!",
+            "ohnoReaction": "Worried about the circus? Relax, it's all under the big top!",
+            "next": "Circus aside..."
+        },
+        {
+            "text": [
+                "I always admired circus performers.",
+                "The courage, the spectacle—it's captivating."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "You find the circus amusing? It's an art, not a joke!",
+            "dotdotdotReaction": "Yes, there's something magical about the circus.",
+            "ohnoReaction": "Intimidated by the circus? It's entertainment, not a trial!",
+            "next": "Speaking of performances..."
+        },
+        {
+            "text": [
+                "I tried my hand at magic tricks once.",
+                "Let's just say, I made my audience disappear."
+            ],
+            "correctOptions": [
+                "haha"
+            ],
+            "hahaReaction": "Vanishing act successful, I see! Glad you got a kick out of it.",
+            "dotdotdotReaction": "No applause? My magic career ended quicker than it started!",
+            "ohnoReaction": "It's a joke, not a tragic show! No need for sympathy.",
+            "next": "Magic tricks aside..."
+        },
+        {
+            "text": [
+                "Believing in magic in a world so logical,",
+                "Sometimes feels like a rebellion."
+            ],
+            "correctOptions": [
+                "dotdotdot"
+            ],
+            "hahaReaction": "Rebelling with magic makes you laugh? It's a serious act of wonder!",
+            "dotdotdotReaction": "It's true, magic adds a layer of mystery to life.",
+            "ohnoReaction": "Magic too fanciful for your taste? It's not for everyone.",
+            "next": "Let's leave the mystical behind for now..."
+        }
+    ]
+}
